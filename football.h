@@ -28,6 +28,16 @@ public:
     void setSurfaceType(QString oST);
     void setStadiumRoofType(QString oSRT);
     void setDateOpened(int oDO);
+
+    QString getTeamName();
+    QString getStadiumName();
+    int getSeatingCapacity();
+    QString getLocation();
+    QString getConference();
+    QString getDivision();
+    QString getSurfaceType();
+    QString getStadiumRoofType();
+    int getDateOpened();
 };
 
 #endif // FOOTBALL_H

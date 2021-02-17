@@ -70,3 +70,48 @@ void Football::setDateOpened(int oDO)
 {
     dateOpened = oDO;
 }
+
+QString Football::getTeamName()
+{
+    return teamName;
+}
+
+QString Football::getStadiumName()
+{
+    return stadiumName;
+}
+
+int Football::getSeatingCapacity()
+{
+    return seatingCapacity;
+}
+
+QString Football::getLocation()
+{
+    return location;
+}
+
+QString Football::getConference()
+{
+    return conference;
+}
+
+QString Football::getDivision()
+{
+    return division;
+}
+
+QString Football::getSurfaceType()
+{
+    return surfaceType;
+}
+
+QString Football::getStadiumRoofType()
+{
+    return stadiumRoofType;
+}
+
+int Football::getDateOpened()
+{
+    return dateOpened;
+}
