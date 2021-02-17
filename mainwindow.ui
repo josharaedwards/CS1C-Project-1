@@ -10,50 +10,208 @@
     <height>720</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1280</width>
+    <height>720</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(236, 239, 244);</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <property name="maximumSize">
+    <size>
+     <width>1280</width>
+     <height>720</height>
+    </size>
+   </property>
+   <widget class="QFrame" name="content">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>1251</width>
-      <height>651</height>
+      <x>80</x>
+      <y>80</y>
+      <width>1199</width>
+      <height>641</height>
      </rect>
     </property>
-    <property name="currentIndex">
-     <number>2</number>
+    <property name="minimumSize">
+     <size>
+      <width>1199</width>
+      <height>641</height>
+     </size>
     </property>
-    <widget class="QWidget" name="mainTab">
-     <attribute name="title">
-      <string>Main</string>
-     </attribute>
+    <property name="maximumSize">
+     <size>
+      <width>1199</width>
+      <height>641</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(236, 239, 244);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="sidebar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>81</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>81</width>
+      <height>720</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>111</width>
+      <height>720</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(46, 52, 64);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="homeBtn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>81</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>111</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
+}</string>
+     </property>
+     <property name="text">
+      <string>Home</string>
+     </property>
     </widget>
-    <widget class="QWidget" name="sortTab">
-     <attribute name="title">
+    <widget class="QPushButton" name="sortBtn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>80</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>81</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>111</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
+}</string>
+     </property>
+     <property name="text">
       <string>Sort</string>
-     </attribute>
+     </property>
     </widget>
-    <widget class="QWidget" name="adminTab">
-     <attribute name="title">
+    <widget class="QPushButton" name="adminBtn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>160</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>81</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>111</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
+}</string>
+     </property>
+     <property name="text">
       <string>Admin</string>
-     </attribute>
+     </property>
     </widget>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1280</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
