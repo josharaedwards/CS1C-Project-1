@@ -29,37 +29,6 @@
      <height>720</height>
     </size>
    </property>
-   <widget class="QFrame" name="content">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>80</y>
-      <width>1199</width>
-      <height>641</height>
-     </rect>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>1199</width>
-      <height>641</height>
-     </size>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>1199</width>
-      <height>641</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(236, 239, 244);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-   </widget>
    <widget class="QFrame" name="sidebar">
     <property name="geometry">
      <rect>
@@ -211,8 +180,177 @@ QPushButton:hover {
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="contentContainer" native="true">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>10</y>
+      <width>1181</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1181</width>
+      <height>701</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1181</width>
+      <height>701</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(236, 239, 244);</string>
+    </property>
+    <widget class="QWidget" name="homeContent" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-1</y>
+       <width>105</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="homePlaceholder">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Home Placeholder&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="sortContent" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>98</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="sortPlaceholder">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Sort Placeholder&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="adminContent" native="true">
+     <property name="geometry">
+      <rect>
+       <x>-1</x>
+       <y>-1</y>
+       <width>105</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="adminPlaceholder">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Admin Placeholder&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <zorder>adminContent</zorder>
+    <zorder>sortContent</zorder>
+    <zorder>homeContent</zorder>
+   </widget>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>homeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displayHome()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>46</x>
+     <y>48</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>306</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sortBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displaySort()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>34</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>433</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>adminBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displayAdmin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>570</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>displayAdmin()</slot>
+  <slot>displayHome()</slot>
+  <slot>displaySort()</slot>
+ </slots>
 </ui>
