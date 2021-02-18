@@ -229,7 +229,13 @@ QPushButton:hover {
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
-</string>
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
       </property>
       <property name="text">
        <string>Help</string>
@@ -251,7 +257,13 @@ QPushButton:hover {
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
-</string>
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
       </property>
       <property name="text">
        <string>Contact</string>
@@ -425,8 +437,8 @@ QPushButton:hover {
      </layout>
     </widget>
     <zorder>adminContent</zorder>
-    <zorder>homeContent</zorder>
     <zorder>sortContent</zorder>
+    <zorder>homeContent</zorder>
    </widget>
   </widget>
  </widget>

@@ -17,7 +17,13 @@ ContactSheet::~ContactSheet()
 
 void ContactSheet::sendBtnHandler()
 {
-    QMessageBox::information(this, "Contact","Message sent successfully!");
+    QMessageBox msgBox;
+
+    msgBox.setStyleSheet("QMessageBox { font: 75 10pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64); }");
+    msgBox.setWindowTitle("Success");
+    msgBox.setText("Message sent successfully!");
+
+    msgBox.exec();
 }
 
 void ContactSheet::clear()
