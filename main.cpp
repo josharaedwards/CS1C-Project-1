@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "ContactSheet.h"
 
 #include <QApplication>
 
@@ -9,5 +9,3 @@ int main(int argc, char *argv[])
     w.show();
     return a.exec();
 }
-
-//Joshara
