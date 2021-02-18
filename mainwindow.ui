@@ -271,10 +271,137 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>80</y>
+        <y>50</y>
         <width>1161</width>
-        <height>611</height>
+        <height>641</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dataSortDropdown">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>10</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Team Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Stadium Name</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Seating Capacity</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="dataSortBtn">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>10</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
+      </property>
+      <property name="text">
+       <string>Sort</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="dataFilterDropdown">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>321</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Both</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>American Football Conference (AFC)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>National Football League (NFL)</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="dataFilterBtn">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>10</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
+      </property>
+      <property name="text">
+       <string>Filter</string>
       </property>
      </widget>
     </widget>
@@ -298,8 +425,8 @@ QPushButton:hover {
      </layout>
     </widget>
     <zorder>adminContent</zorder>
-    <zorder>sortContent</zorder>
     <zorder>homeContent</zorder>
+    <zorder>sortContent</zorder>
    </widget>
   </widget>
  </widget>
