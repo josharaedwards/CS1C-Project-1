@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>contact</class>
- <widget class="QMainWindow" name="contact">
+ <class>ContactSheet</class>
+ <widget class="QWidget" name="ContactSheet">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1304</width>
-    <height>604</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>contact</string>
+   <string>Contact</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>781</width>
+     <height>581</height>
+    </rect>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>                                                                          Please fill out the following field</string>
-      </property>
-     </widget>
-    </item>
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
@@ -49,6 +62,9 @@
      <widget class="QLineEdit" name="lineEdit_2"/>
     </item>
     <item>
+     <widget class="QPlainTextEdit" name="plainTextEdit"/>
+    </item>
+    <item>
      <widget class="QLabel" name="label_2">
       <property name="text">
        <string>&amp;Message</string>
@@ -57,9 +73,6 @@
        <cstring>plainTextEdit</cstring>
       </property>
      </widget>
-    </item>
-    <item>
-     <widget class="QPlainTextEdit" name="plainTextEdit"/>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton">
@@ -76,21 +89,21 @@
   <connection>
    <sender>pushButton</sender>
    <signal>clicked()</signal>
-   <receiver>contact</receiver>
-   <slot>clear()</slot>
+   <receiver>ContactSheet</receiver>
+   <slot>sendBtnHandler()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>410</x>
-     <y>565</y>
+     <x>322</x>
+     <y>582</y>
     </hint>
     <hint type="destinationlabel">
-     <x>402</x>
-     <y>399</y>
+     <x>798</x>
+     <y>579</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>clear()</slot>
+  <slot>sendBtnHandler()</slot>
  </slots>
 </ui>
