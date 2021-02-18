@@ -9,18 +9,14 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    football.cpp \
     main.cpp \
-    mainwindow.cpp \
-    sort.cpp
+    contact.cpp
 
 HEADERS += \
-    football.h \
-    mainwindow.h \
-    sort.h
+    contact.h
 
 FORMS += \
-    mainwindow.ui
+    contact.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
