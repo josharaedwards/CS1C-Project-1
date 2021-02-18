@@ -3,6 +3,7 @@
 
 #include "football.h"
 
+//Enum for the different sorting types
 enum SortType{team, stadium, seating, location};
 
 void sort(Football footballTeams[], int numOfEntries, SortType sortBy);
