@@ -213,30 +213,50 @@ QPushButton:hover {
        <height>701</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <property name="spacing">
-       <number>0</number>
+     <widget class="QPushButton" name="infoBtn">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>660</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
       </property>
-      <property name="leftMargin">
-       <number>0</number>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+</string>
       </property>
-      <property name="topMargin">
-       <number>0</number>
+      <property name="text">
+       <string>Help</string>
       </property>
-      <property name="rightMargin">
-       <number>0</number>
+     </widget>
+     <widget class="QPushButton" name="contactBtn">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>660</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
       </property>
-      <property name="bottomMargin">
-       <number>0</number>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+</string>
       </property>
-      <item>
-       <widget class="QLabel" name="homePlaceholder">
-        <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Home Placeholder&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+      <property name="text">
+       <string>Contact</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="sortContent" native="true">
      <property name="geometry">
@@ -278,8 +298,8 @@ QPushButton:hover {
      </layout>
     </widget>
     <zorder>adminContent</zorder>
-    <zorder>homeContent</zorder>
     <zorder>sortContent</zorder>
+    <zorder>homeContent</zorder>
    </widget>
   </widget>
  </widget>
@@ -333,10 +353,44 @@ QPushButton:hover {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>contactBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displayContact()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>987</x>
+     <y>683</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1276</x>
+     <y>692</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>infoBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displayHelp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>441</x>
+     <y>688</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>87</x>
+     <y>688</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>displayAdmin()</slot>
   <slot>displayHome()</slot>
   <slot>displaySort()</slot>
+  <slot>displayContact()</slot>
+  <slot>displayHelp()</slot>
  </slots>
 </ui>
