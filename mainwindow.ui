@@ -243,34 +243,20 @@ QPushButton:hover {
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>98</width>
-       <height>33</height>
+       <width>1181</width>
+       <height>701</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <property name="spacing">
-       <number>0</number>
+     <widget class="QTableWidget" name="tableWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>1161</width>
+        <height>611</height>
+       </rect>
       </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="QLabel" name="sortPlaceholder">
-        <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Sort Placeholder&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="adminContent" native="true">
      <property name="geometry">
@@ -292,8 +278,8 @@ QPushButton:hover {
      </layout>
     </widget>
     <zorder>adminContent</zorder>
-    <zorder>sortContent</zorder>
     <zorder>homeContent</zorder>
+    <zorder>sortContent</zorder>
    </widget>
   </widget>
  </widget>
