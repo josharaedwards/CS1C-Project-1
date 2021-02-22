@@ -121,3 +121,29 @@ bool isGreaterThan(int first, int second)
         return false;
     }
 }
+/*void sortByStadiumCapacityWithFilter(Football footballTeams[], int &numOfEntries, QString leagueToFind )
+{
+    Football *newTeams =  new Football[numOfEntries];
+
+    int countAFC = 0;
+    for (int i = 0; i < numOfEntries; i++)
+    {
+     if(leagueToFind == footballTeams->getDivision())
+     {
+
+     }
+
+    }
+    delete []newTeams;
+
+}*/
+
+void totalCapacity(Football footballTeams[], int numOfEntries)
+{
+    double sum = 0.0;
+
+    for (int i = 0; i < numOfEntries; i++)
+   {
+        sum += footballTeams[i].getSeatingCapacity();
+    }
+}
