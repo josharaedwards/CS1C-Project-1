@@ -1,3 +1,4 @@
+
 #include "sort.h"
 
 void sort(Football footballTeams[], int numOfEntries, SortType sortBy)
@@ -120,4 +121,16 @@ bool isGreaterThan(int first, int second)
     {
         return false;
     }
+}
+
+int totalCapacity(Football footballTeams[], int numOfEntries)
+{
+    int sum = 0;
+
+    for (int i = 0; i < numOfEntries; i++)
+    {
+        sum += footballTeams[i].getSeatingCapacity();
+    }
+
+    return sum;
 }

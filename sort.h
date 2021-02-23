@@ -20,4 +20,7 @@ bool isGreaterThan(QString first, QString second);
 
 bool isGreaterThan(int first, int second);
 
+int totalCapacity(Football footballTeams[], int numOfEntries);
 #endif // SORT_H
+
+
