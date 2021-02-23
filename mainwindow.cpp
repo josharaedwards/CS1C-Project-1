@@ -21,37 +21,42 @@ MainWindow::~MainWindow()
 
 void MainWindow::displayAdmin()
 {
-    this->ui->adminBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(236, 239, 244);color: rgb(46, 52, 64);");
-    this->ui->homeBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(46, 52, 64);color: rgb(236, 239, 244);");
-    this->ui->sortBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(46, 52, 64);color: rgb(236, 239, 244);");
+    this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
+    this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
+    this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->adminContent->raise();
 }
 
 void MainWindow::displayHome()
 {
-    this->ui->adminBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(46, 52, 64);color: rgb(236, 239, 244);");
-    this->ui->homeBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(236, 239, 244);color: rgb(46, 52, 64);");
-    this->ui->sortBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(46, 52, 64);color: rgb(236, 239, 244);");
+    this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
+    this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
+    this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeContent->raise();
 }
 
 void MainWindow::displaySort()
 {
-    this->ui->adminBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(46, 52, 64);color: rgb(236, 239, 244);");
-    this->ui->homeBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(46, 52, 64);color: rgb(236, 239, 244);");
-    this->ui->sortBtn->setStyleSheet("border:none;font: 75 12pt \"Consolas\";background-color: rgb(236, 239, 244);color: rgb(46, 52, 64);");
+    this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
+    this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
+    this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
     this->ui->sortContent->raise();
 }
 
 void MainWindow::displayHelp()
 {
-    QMessageBox::information(this, "Navigating this pamphlet",
+    QMessageBox msgBox;
+
+    msgBox.setStyleSheet("QMessageBox { font: 75 10pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64); }");
+    msgBox.setWindowTitle("Navigating this pamplet");
+    msgBox.setText(
         "Using this pamplet is simple with just a few clicks!"
         "\n\n• The tabs on the side allow you to find the content that you need with ease."
         "\n\n• Using our sorting feature, you can see the football teams sorted by alphabetical order, NFL or AFL, stadiums capacity and more."
-        "\n\n• If you have any trouble using the pamplet or simply want to contact us to request a new feature, please fill up the contact sheet!"
-        "We would love to hear from you."
+        "\n\n• If you have any trouble using the pamplet or simply want to contact us to request a new feature, please fill up the contact sheet! We would love to hear from you."
     );
+
+    msgBox.exec();
 }
 
 void MainWindow::displayContact()
