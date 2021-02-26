@@ -4,7 +4,7 @@
 #include "football.h"
 
 //Enum for the different sorting types
-enum SortType{team, stadium, seating, location};
+enum SortType{team, stadium, seating, location, league};
 
 void sort(Football footballTeams[], int numOfEntries, SortType sortBy);
 
@@ -16,11 +16,15 @@ void sortBySeating(Football footballTeams[], int numOfEntries);
 
 void sortByLocation(Football footballTeams[], int numOfEntries);
 
+void sortByLeague(Football footballTeams[], int numOfEntries);
+
 bool isGreaterThan(QString first, QString second);
 
 bool isGreaterThan(int first, int second);
 
 int totalCapacity(Football footballTeams[], int numOfEntries);
+
+void SortRoofType(Football footballTeams[], int numOfEntries);
 #endif // SORT_H
 
 
