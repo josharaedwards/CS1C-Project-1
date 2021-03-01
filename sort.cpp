@@ -1,4 +1,4 @@
-
+#include <QtDebug>
 #include "sort.h"
 
 void sort(Football footballTeams[], int numOfEntries, SortType sortBy)
@@ -17,6 +17,10 @@ void sort(Football footballTeams[], int numOfEntries, SortType sortBy)
     case location:
         sortByLocation(footballTeams, numOfEntries);
         break;
+    case league:
+        sortByLocation(footballTeams, numOfEntries);
+        break;
+
     }
 }
 
@@ -133,4 +137,33 @@ int totalCapacity(Football footballTeams[], int numOfEntries)
     }
 
     return sum;
+}
+
+void SortRoofType(Football footballTeams[], int numOfEntries)
+{
+    //choose stadium Roof type
+    QString roofType;
+
+    for(int i = 0; i <numOfEntries; i++)
+    {
+        if(footballTeams[i].getStadiumRoofType() == roofType)
+        {
+             QTextStream(stdout) << footballTeams[i].getStadiumName() << "   " << footballTeams[i].getStadiumRoofType()  << endl;
+        }
+    }
+}
+
+void sortByLeague(Football footballTeams[], int numOfEntries)
+{
+    //choose by league NFL or AFC
+    QString selectedLeague;
+
+    for(int i = 0; i <numOfEntries; i++)
+    {
+        if(footballTeams[i].getDivision() == selectedLeague)
+        {
+            QTextStream(stdout) <<footballTeams[i].getDivision() << " " << footballTeams[i].getTeamName() << " " << footballTeams[i].getStadiumName() << " " << footballTeams[i].getSeatingCapacity() << " " << footballTeams[i].getLocation() << " " << footballTeams[i].getConference() << " " << footballTeams[i].getSurfaceType() << " " << footballTeams[i].getStadiumRoofType() << " " << footballTeams[i].getDateOpened() << endl;
+
+        }
+    }
 }
