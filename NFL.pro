@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     contactsheet.cpp \
     football.cpp \
+    init.cpp \
     main.cpp \
     mainwindow.cpp \
     sort.cpp
@@ -18,6 +19,7 @@ SOURCES += \
 HEADERS += \
     contactsheet.h \
     football.h \
+    init.h \
     mainwindow.h \
     sort.h
 
