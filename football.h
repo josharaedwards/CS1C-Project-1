@@ -2,6 +2,7 @@
 #define FOOTBALL_H
 
 #include <QString>
+#include <QVector>
 
 class Football
 {
