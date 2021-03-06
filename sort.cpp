@@ -148,7 +148,7 @@ void SortRoofType(Football footballTeams[], int numOfEntries)
     {
         if(footballTeams[i].getStadiumRoofType() == roofType)
         {
-             QTextStream(stdout) << footballTeams[i].getStadiumName() << "   " << footballTeams[i].getStadiumRoofType()  << endl;
+             QTextStream(stdout) << footballTeams[i].getStadiumName() << "   " << footballTeams[i].getStadiumRoofType();
         }
     }
 }
@@ -162,7 +162,7 @@ void sortByLeague(Football footballTeams[], int numOfEntries)
     {
         if(footballTeams[i].getDivision() == selectedLeague)
         {
-            QTextStream(stdout) <<footballTeams[i].getDivision() << " " << footballTeams[i].getTeamName() << " " << footballTeams[i].getStadiumName() << " " << footballTeams[i].getSeatingCapacity() << " " << footballTeams[i].getLocation() << " " << footballTeams[i].getConference() << " " << footballTeams[i].getSurfaceType() << " " << footballTeams[i].getStadiumRoofType() << " " << footballTeams[i].getDateOpened() << endl;
+            QTextStream(stdout) <<footballTeams[i].getDivision() << " " << footballTeams[i].getTeamName() << " " << footballTeams[i].getStadiumName() << " " << footballTeams[i].getSeatingCapacity() << " " << footballTeams[i].getLocation() << " " << footballTeams[i].getConference() << " " << footballTeams[i].getSurfaceType() << " " << footballTeams[i].getStadiumRoofType() << " " << footballTeams[i].getDateOpened();
 
         }
     }
