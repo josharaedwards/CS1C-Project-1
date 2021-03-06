@@ -1,7 +1,7 @@
 #include <QtDebug>
 #include "sort.h"
 
-void sort(Football footballTeams[], int numOfEntries, SortType sortBy)
+void sort(QVector<Football> footballTeams, int numOfEntries, SortType sortBy)
 {
     switch(sortBy)
     {
@@ -24,7 +24,7 @@ void sort(Football footballTeams[], int numOfEntries, SortType sortBy)
     }
 }
 
-void sortByTeam(Football footballTeams[], int numOfEntries)
+void sortByTeam(QVector<Football> footballTeams, int numOfEntries)
 {
     for(int i = 0; i < numOfEntries - 1; ++i)
     {
@@ -43,7 +43,7 @@ void sortByTeam(Football footballTeams[], int numOfEntries)
     }
 }
 
-void sortByStadium(Football footballTeams[], int numOfEntries)
+void sortByStadium(QVector<Football> footballTeams, int numOfEntries)
 {
     for(int i = 0; i < numOfEntries - 1; ++i)
     {
@@ -62,7 +62,7 @@ void sortByStadium(Football footballTeams[], int numOfEntries)
     }
 }
 
-void sortBySeating(Football footballTeams[], int numOfEntries)
+void sortBySeating(QVector<Football> footballTeams, int numOfEntries)
 {
     for(int i = 0; i < numOfEntries - 1; ++i)
     {
@@ -81,7 +81,7 @@ void sortBySeating(Football footballTeams[], int numOfEntries)
     }
 }
 
-void sortByLocation(Football footballTeams[], int numOfEntries)
+void sortByLocation(QVector<Football> footballTeams, int numOfEntries)
 {
     for(int i = 0; i < numOfEntries - 1; ++i)
     {
@@ -127,7 +127,7 @@ bool isGreaterThan(int first, int second)
     }
 }
 
-int totalCapacity(Football footballTeams[], int numOfEntries)
+int totalCapacity(QVector<Football> footballTeams, int numOfEntries)
 {
     int sum = 0;
 
@@ -139,7 +139,7 @@ int totalCapacity(Football footballTeams[], int numOfEntries)
     return sum;
 }
 
-void SortRoofType(Football footballTeams[], int numOfEntries)
+void SortRoofType(QVector<Football> footballTeams, int numOfEntries)
 {
     //choose stadium Roof type
     QString roofType;
@@ -153,7 +153,7 @@ void SortRoofType(Football footballTeams[], int numOfEntries)
     }
 }
 
-void sortByLeague(Football footballTeams[], int numOfEntries)
+void sortByLeague(QVector<Football> footballTeams, int numOfEntries)
 {
     //choose by league NFL or AFC
     QString selectedLeague;
