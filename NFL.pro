@@ -12,6 +12,7 @@ SOURCES += \
     contactsheet.cpp \
     football.cpp \
     init.cpp \
+    initialization.cpp \
     main.cpp \
     mainwindow.cpp \
     sort.cpp

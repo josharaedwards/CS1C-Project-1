@@ -3,14 +3,14 @@
 
 void stringGetter(QString &str)
 {
-    //getline(cin, str);        #Joshara - Get this operable within QT
-    //while(str=="")
-        //getline(cin, str);
+    getline(cin, str);        #Joshara - Get this operable within QT
+    while(str=="")
+    getline(cin, str);
 }
 
 void display(QVector<Football> arr) {
 
-    /*for (int i = 0; i < arr.size(); i++) {
+    for (int i = 0; i < arr.size(); i++) {
 
         cout << "======>> Team # " << i + 1 << " <<=========" << endl;
         cout << endl;
@@ -19,13 +19,13 @@ void display(QVector<Football> arr) {
         cout << "Stadium Name: " << arr[i].stadium << endl;
         cout << "Address: " << arr[i].address << endl;
         cout << endl;
-    }*/
+    }
 
 }
 
 void fileWrite(QVector<Football> arr, QDataStream &fout)
 {
-    /*for (int i = 0; i < arr.size(); i++) {
+    for (int i = 0; i < arr.size(); i++) {
             if (i != 0)
                 fout << endl;
             fout << arr[i].getTeamName() << ',';
@@ -33,7 +33,7 @@ void fileWrite(QVector<Football> arr, QDataStream &fout)
             fout << arr[i].getStadiumName() << ',';
             fout << arr[i].address;
         }
-        fout.close();*/
+        fout.close();
 }
 
 void fileRead(QVector<Football> &arr, QDataStream &fin)
@@ -56,7 +56,7 @@ void fileRead(QVector<Football> &arr, QDataStream &fin)
 
 void testInit()
 {
-    /*ifstream fin;
+    ifstream fin;
         ofstream fout;
         vector<Team> NFL;
         vector<Team> AFC;
@@ -454,5 +454,5 @@ void testInit()
                     break;
                 }
             }
-        }*/
+        }
 }
