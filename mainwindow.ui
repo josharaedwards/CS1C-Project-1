@@ -204,72 +204,6 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">background-color: rgb(236, 239, 244);</string>
     </property>
-    <widget class="QWidget" name="homeContent" native="true">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>-1</y>
-       <width>1181</width>
-       <height>701</height>
-      </rect>
-     </property>
-     <widget class="QPushButton" name="infoBtn">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>660</y>
-        <width>581</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
-}
-
-QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
-}</string>
-      </property>
-      <property name="text">
-       <string>Help</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="contactBtn">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>660</y>
-        <width>581</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
-}
-
-QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
-}</string>
-      </property>
-      <property name="text">
-       <string>Contact</string>
-      </property>
-     </widget>
-    </widget>
     <widget class="QWidget" name="sortContent" native="true">
      <property name="geometry">
       <rect>
@@ -416,6 +350,321 @@ QPushButton:hover {
        <string>Filter</string>
       </property>
      </widget>
+     <widget class="QTableWidget" name="tableWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>1141</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>10</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>11</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>12</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>13</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>14</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>15</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>16</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>17</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>18</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>19</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>20</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>21</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>22</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>23</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>24</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>25</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>26</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>27</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>28</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>29</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>30</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>31</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>32</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>33</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>34</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>35</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>36</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>37</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>38</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>39</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>40</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>41</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>42</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>43</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>44</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>45</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>46</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>47</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>48</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>49</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>50</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Team Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Stadium Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Seating Capacity</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Conference</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Division</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>New Column</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Stadium roof type</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Date opened</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Expansion</string>
+       </property>
+      </column>
+      <item row="0" column="0">
+       <property name="text">
+        <string>Hi, This is looking good</string>
+       </property>
+      </item>
+     </widget>
     </widget>
     <widget class="QWidget" name="adminContent" native="true">
      <property name="geometry">
@@ -438,7 +687,6 @@ QPushButton:hover {
     </widget>
     <zorder>adminContent</zorder>
     <zorder>sortContent</zorder>
-    <zorder>homeContent</zorder>
    </widget>
   </widget>
  </widget>
@@ -489,38 +737,6 @@ QPushButton:hover {
     <hint type="destinationlabel">
      <x>570</x>
      <y>8</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>contactBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>displayContact()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>987</x>
-     <y>683</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1276</x>
-     <y>692</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>infoBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>displayHelp()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>441</x>
-     <y>688</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>87</x>
-     <y>688</y>
     </hint>
    </hints>
   </connection>
