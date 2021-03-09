@@ -4,27 +4,27 @@
 #include "football.h"
 
 //Enum for the different sorting types
-enum SortType{team, stadium, seating, location, league};
+enum SortType{team, stadium, seating, location, league, rooftype};
 
-void sort(QVector<Football> footballTeams, int numOfEntries, SortType sortBy);
+QVector<Football> sort(QVector<Football> footballTeams, SortType sortBy);
 
-void sortByTeam(QVector<Football> footballTeams, int numOfEntries);
+QVector<Football> sortByTeam(QVector<Football> footballTeams);
 
-void sortByStadium(QVector<Football> footballTeams, int numOfEntries);
+QVector<Football> sortByStadium(QVector<Football> footballTeams);
 
-void sortBySeating(QVector<Football> footballTeams, int numOfEntries);
+QVector<Football> sortBySeating(QVector<Football> footballTeams);
 
-void sortByLocation(QVector<Football> footballTeams, int numOfEntries);
+QVector<Football> sortByLocation(QVector<Football> footballTeams);
 
-void sortByLeague(QVector<Football> footballTeams, int numOfEntries);
+QVector<Football> sortByLeague(QVector<Football> footballTeams);
+
+QVector<Football> sortByRoofType(QVector<Football> footballTeams);
 
 bool isGreaterThan(QString first, QString second);
 
 bool isGreaterThan(int first, int second);
 
-int totalCapacity(QVector<Football> footballTeams, int numOfEntries);
-
-void SortRoofType(QVector<Football> footballTeams, int numOfEntries);
+int totalCapacity(QVector<Football> footballTeams);
 
 #endif // SORT_H
 
