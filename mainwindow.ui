@@ -216,9 +216,9 @@ QPushButton:hover {
      <widget class="QPushButton" name="infoBtn">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>660</y>
-        <width>581</width>
+        <x>10</x>
+        <y>650</y>
+        <width>571</width>
         <height>41</height>
        </rect>
       </property>
@@ -244,8 +244,8 @@ QPushButton:hover {
      <widget class="QPushButton" name="contactBtn">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>660</y>
+        <x>590</x>
+        <y>650</y>
         <width>581</width>
         <height>41</height>
        </rect>
@@ -834,6 +834,9 @@ QPushButton:hover {
       </property>
      </widget>
     </widget>
+    <zorder>sortContent</zorder>
+    <zorder>adminContent</zorder>
+    <zorder>homeContent</zorder>
    </widget>
   </widget>
  </widget>
