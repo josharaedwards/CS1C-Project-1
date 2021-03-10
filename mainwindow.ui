@@ -204,6 +204,72 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">background-color: rgb(236, 239, 244);</string>
     </property>
+        <widget class="QWidget" name="homeContent" native="true">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>-1</y>
+       <width>1181</width>
+       <height>701</height>
+      </rect>
+     </property>
+     <widget class="QPushButton" name="infoBtn">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>660</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
+      </property>
+      <property name="text">
+       <string>Help</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="contactBtn">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>660</y>
+        <width>581</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
+      </property>
+      <property name="text">
+       <string>Contact</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="sortContent" native="true">
      <property name="geometry">
       <rect>
