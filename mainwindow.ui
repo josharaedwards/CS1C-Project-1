@@ -204,7 +204,7 @@ QPushButton:hover {
     <property name="styleSheet">
      <string notr="true">background-color: rgb(236, 239, 244);</string>
     </property>
-        <widget class="QWidget" name="homeContent" native="true">
+    <widget class="QWidget" name="homeContent" native="true">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -292,7 +292,7 @@ QPushButton:hover {
      <widget class="QComboBox" name="dataSortDropdown">
       <property name="geometry">
        <rect>
-        <x>780</x>
+        <x>590</x>
         <y>10</y>
         <width>201</width>
         <height>31</height>
@@ -330,7 +330,7 @@ QPushButton:hover {
      <widget class="QPushButton" name="dataSortBtn">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>800</x>
         <y>10</y>
         <width>181</width>
         <height>31</height>
@@ -731,6 +731,34 @@ QPushButton:hover {
        </property>
       </item>
      </widget>
+     <widget class="QPushButton" name="dataResetBtn">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>10</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
+      </property>
+      <property name="text">
+       <string>Sort</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="adminContent" native="true">
      <property name="geometry">
@@ -751,6 +779,7 @@ QPushButton:hover {
       </item>
      </layout>
     </widget>
+    <zorder>homeContent</zorder>
     <zorder>adminContent</zorder>
     <zorder>sortContent</zorder>
    </widget>
