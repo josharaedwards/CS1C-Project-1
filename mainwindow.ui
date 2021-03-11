@@ -746,7 +746,7 @@ QPushButton:hover {
 }</string>
       </property>
       <property name="text">
-       <string>Sort</string>
+       <string>Reset</string>
       </property>
      </widget>
      <zorder>dataSortDropdown</zorder>
@@ -834,9 +834,9 @@ QPushButton:hover {
       </property>
      </widget>
     </widget>
-    <zorder>sortContent</zorder>
     <zorder>adminContent</zorder>
     <zorder>homeContent</zorder>
+    <zorder>sortContent</zorder>
    </widget>
   </widget>
  </widget>
@@ -887,6 +887,38 @@ QPushButton:hover {
     <hint type="destinationlabel">
      <x>570</x>
      <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>infoBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displayHelp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>671</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>543</x>
+     <y>712</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>contactBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displayContact()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>959</x>
+     <y>676</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1124</x>
+     <y>712</y>
     </hint>
    </hints>
   </connection>
