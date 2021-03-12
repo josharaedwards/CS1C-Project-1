@@ -120,10 +120,10 @@ QVector<Football> sortByLocation(QVector<Football> footballTeams)
     return footballTeams;
 }
 
-bool isGreaterThan(QString first, QString second)
+bool isGreaterThan(string first, string second)
 {
-    QCharRef firstLetter = first[0];
-    QCharRef secondLetter = second[0];
+    char firstLetter = first[0];
+    char secondLetter = second[0];
 
     if(firstLetter > secondLetter)
     {
@@ -154,7 +154,8 @@ int totalCapacity(QVector<Football> footballTeams)
 
     for (int i = 0; i < numOfEntries; i++)
     {
-        sum += footballTeams[i].getSeatingCapacity();
+        int num = stoi(footballTeams[i].getSeatingCapacity());
+        sum += num;
     }
 
     return sum;
@@ -163,7 +164,7 @@ int totalCapacity(QVector<Football> footballTeams)
 QVector<Football> sortByRoofType(QVector<Football> footballTeams)
 {
     //choose stadium Roof type
-    QString roofType;
+    string roofType;
 
     int numOfEntries = footballTeams.size();
 
@@ -171,7 +172,7 @@ QVector<Football> sortByRoofType(QVector<Football> footballTeams)
     {
         if(footballTeams[i].getStadiumRoofType() == roofType)
         {
-             QTextStream(stdout) << footballTeams[i].getStadiumName() << "   " << footballTeams[i].getStadiumRoofType();
+             //QTextStream(stdout) << footballTeams[i].getStadiumName() << "   " << footballTeams[i].getStadiumRoofType();
         }
     }
 
@@ -181,7 +182,7 @@ QVector<Football> sortByRoofType(QVector<Football> footballTeams)
 QVector<Football> sortByLeague(QVector<Football> footballTeams)
 {
     //choose by league NFL or AFC
-    QString selectedLeague;
+    string selectedLeague;
 
     int numOfEntries = footballTeams.size();
 
@@ -189,7 +190,7 @@ QVector<Football> sortByLeague(QVector<Football> footballTeams)
     {
         if(footballTeams[i].getDivision() == selectedLeague)
         {
-            QTextStream(stdout) <<footballTeams[i].getDivision() << " " << footballTeams[i].getTeamName() << " " << footballTeams[i].getStadiumName() << " " << footballTeams[i].getSeatingCapacity() << " " << footballTeams[i].getLocation() << " " << footballTeams[i].getConference() << " " << footballTeams[i].getSurfaceType() << " " << footballTeams[i].getStadiumRoofType() << " " << footballTeams[i].getDateOpened();
+            //QTextStream(stdout) <<footballTeams[i].getDivision() << " " << footballTeams[i].getTeamName() << " " << footballTeams[i].getStadiumName() << " " << footballTeams[i].getSeatingCapacity() << " " << footballTeams[i].getLocation() << " " << footballTeams[i].getConference() << " " << footballTeams[i].getSurfaceType() << " " << footballTeams[i].getStadiumRoofType() << " " << footballTeams[i].getDateOpened();
 
         }
     }
