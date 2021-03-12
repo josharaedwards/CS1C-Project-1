@@ -3,9 +3,9 @@
 
 #include "football.h"
 #include "sort.h"
-#include <iostream>
-#include <QDataStream>
 
-void fileRead(QVector<Football> &arr, QDataStream &fin);
+QVector<Football> fileRead(string fileName);
+
+Football updateFromFile(ifstream& myFile, int lineNum, Football tempTeam);
 
 #endif // INIT_H

@@ -4,16 +4,16 @@ Football::Football()
 {
     teamName = "None";
     stadiumName = "None";
-    seatingCapacity = 0;
+    seatingCapacity = "0";
     location = "None";
     conference = "None";
     division = "None";
     surfaceType = "None";
     stadiumRoofType = "None";
-    dateOpened = 0;
+    dateOpened = "0";
 }
 
-Football::Football(QString oTN, QString oSN, int oSC, QString oL, QString oC, QString oD, QString oST, QString oSRT, int oDO)
+Football::Football(string oTN, string oSN, string oSC, string oL, string oC, string oD, string oST, string oSRT, string oDO)
 {
     teamName = oTN;
     stadiumName = oSN;
@@ -26,92 +26,92 @@ Football::Football(QString oTN, QString oSN, int oSC, QString oL, QString oC, QS
     dateOpened = oDO;
 }
 
-void Football::setTeamName(QString oTN)
+void Football::setTeamName(string oTN)
 {
     teamName = oTN;
 }
 
-void Football::setStadiumName(QString oSN)
+void Football::setStadiumName(string oSN)
 {
     stadiumName = oSN;
 }
 
-void Football::setSeatingCapacity(int oSC)
+void Football::setSeatingCapacity(string oSC)
 {
     seatingCapacity = oSC;
 }
 
-void Football::setLocation(QString oL)
+void Football::setLocation(string oL)
 {
     location = oL;
 }
 
-void Football::setConference(QString oC)
+void Football::setConference(string oC)
 {
     conference = oC;
 }
 
-void Football::setDivision(QString oD)
+void Football::setDivision(string oD)
 {
     division = oD;
 }
 
-void Football::setSurfaceType(QString oST)
+void Football::setSurfaceType(string oST)
 {
     surfaceType = oST;
 }
 
-void Football::setStadiumRoofType(QString oSRT)
+void Football::setStadiumRoofType(string oSRT)
 {
     stadiumRoofType = oSRT;
 }
 
-void Football::setDateOpened(int oDO)
+void Football::setDateOpened(string oDO)
 {
     dateOpened = oDO;
 }
 
-QString Football::getTeamName()
+string Football::getTeamName()
 {
     return teamName;
 }
 
-QString Football::getStadiumName()
+string Football::getStadiumName()
 {
     return stadiumName;
 }
 
-int Football::getSeatingCapacity()
+string Football::getSeatingCapacity()
 {
     return seatingCapacity;
 }
 
-QString Football::getLocation()
+string Football::getLocation()
 {
     return location;
 }
 
-QString Football::getConference()
+string Football::getConference()
 {
     return conference;
 }
 
-QString Football::getDivision()
+string Football::getDivision()
 {
     return division;
 }
 
-QString Football::getSurfaceType()
+string Football::getSurfaceType()
 {
     return surfaceType;
 }
 
-QString Football::getStadiumRoofType()
+string Football::getStadiumRoofType()
 {
     return stadiumRoofType;
 }
 
-int Football::getDateOpened()
+string Football::getDateOpened()
 {
     return dateOpened;
 }

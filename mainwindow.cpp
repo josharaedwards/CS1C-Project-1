@@ -2,6 +2,7 @@
 #include "contactsheet.h"
 #include "ui_mainwindow.h"
 #include "ui_contactsheet.h"
+#include "init.h"
 
 #include <QMessageBox>
 
@@ -12,6 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     this->displayHome();
+
+    //Testing file reading
+    fileRead("NFL Information.tsv");
 }
 
 MainWindow::~MainWindow()

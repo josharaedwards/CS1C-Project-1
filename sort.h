@@ -20,7 +20,7 @@ QVector<Football> sortByLeague(QVector<Football> footballTeams);
 
 QVector<Football> sortByRoofType(QVector<Football> footballTeams);
 
-bool isGreaterThan(QString first, QString second);
+bool isGreaterThan(string first, string second);
 
 bool isGreaterThan(int first, int second);
 
