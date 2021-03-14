@@ -43,7 +43,10 @@ void MainWindow::displayHome()
 
 void MainWindow::displaySort()
 {
-    //footballTeams;
+    int numOfEntries = footballTeams.size();
+    this->ui->tableWidget->setRowCount(numOfEntries);
+
+    populateSortCells();
 
     this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
@@ -73,4 +76,23 @@ void MainWindow::displayContact()
 
     contact->setAttribute(Qt::WA_DeleteOnClose);
     contact->show();
+}
+
+void MainWindow::populateSortCells()
+{
+    int numOfEntries = footballTeams.size();
+
+    for(int i = 1; i < numOfEntries; ++i)
+    {
+        QTableWidgetItem *item;
+
+        for(int j = 0; j < 9; ++j)
+        {
+            item = new QTableWidgetItem;
+            QString itemText = footballTeams[i].getDataFromIndex(j);
+            item->setText(itemText);
+
+            this->ui->tableWidget->setItem(i - 1, j, item);
+        }
+    }
 }

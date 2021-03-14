@@ -115,3 +115,44 @@ QString Football::getDateOpened()
 {
     return dateOpened;
 }
+
+QString Football::getDataFromIndex(int num)
+{
+    QString data;
+
+    switch(num)
+    {
+    case 0:
+       data = teamName;
+       break;
+    case 1:
+       data = stadiumName;
+       break;
+    case 2:
+       data = seatingCapacity;
+       break;
+    case 3:
+       data = location;
+       break;
+    case 4:
+       data = conference;
+       break;
+    case 5:
+       data = division;
+       break;
+    case 6:
+       data = surfaceType;
+       break;
+    case 7:
+       data = stadiumRoofType;
+       break;
+    case 8:
+       data = dateOpened;
+       break;
+    default:
+       data = " ";
+       break;
+    }
+
+    return data;
+}

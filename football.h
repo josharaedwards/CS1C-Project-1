@@ -46,6 +46,8 @@ public:
     QString getSurfaceType();
     QString getStadiumRoofType();
     QString getDateOpened();
+
+    QString getDataFromIndex(int num);
 };
 
 #endif // FOOTBALL_H
