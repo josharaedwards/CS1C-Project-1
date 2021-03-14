@@ -6,6 +6,9 @@
 
 #include <QMessageBox>
 
+//Global Football Teams Data Holder
+vector<Football> footballTeams;
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -14,8 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     this->displayHome();
 
-    //Testing file reading
-    fileRead("NFL Information.tsv");
+    footballTeams =  fileRead("C:/Users/josha/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
 }
 
 MainWindow::~MainWindow()
@@ -41,6 +43,8 @@ void MainWindow::displayHome()
 
 void MainWindow::displaySort()
 {
+    //footballTeams;
+
     this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");

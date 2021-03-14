@@ -1,82 +1,84 @@
 #include "init.h"
 
-QVector<Football> fileRead(string fileName)
+vector<Football> fileRead(QString fileName)
 {
-    QVector<Football> footballTeams;
-    int count = 0;
+    vector<Football> footballTeams;
 
-    ifstream myFile;
-    myFile.open(fileName);
-
-    while (myFile)
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        string line;
-        Football tempTeam;
-
-        while(myFile && count < 9)
-        {
-            if (count == 8)
-            {
-                tempTeam = updateFromFile(myFile, count, tempTeam);
-                footballTeams.push_back(tempTeam);
-                count = 0;
-            }
-            else
-            {
-                tempTeam = updateFromFile(myFile, count, tempTeam);
-                count++;
-            }
-        }
+        return footballTeams;
     }
 
-    myFile.close();
+    QTextStream in(&file);
+    while (!in.atEnd())
+    {
+        QString line;
+        Football tempTeam;
+
+        line = in.readLine();
+
+        tempTeam = processLine(tempTeam, line);
+
+        footballTeams.push_back(tempTeam);
+    }
 
     return footballTeams;
 }
 
-Football updateFromFile(ifstream& myFile, int lineNum, Football tempTeam)
+Football processLine(Football tempTeam, QString line)
 {
-    string text;
+    QStringList list;
 
-    switch(lineNum)
+    list = line.split('\t');
+    int size = list.size();
+
+    for(int i = 0; i < size; ++i)
+    {
+        updateFootballInfo(tempTeam, list, i);
+    }
+
+    return tempTeam;
+}
+
+Football updateFootballInfo(Football& tempTeam, QStringList list, int num)
+{
+    if(list[num] == "")
+    {
+        return tempTeam;
+    }
+
+    switch(num)
     {
     case 0:
-        getline(myFile, text, '\t');
-        tempTeam.setTeamName(text);
+        tempTeam.setTeamName(list[num]);
         break;
     case 1:
-        getline(myFile, text, '\t');
-        tempTeam.setStadiumName(text);
+        tempTeam.setStadiumName(list[num]);
         break;
     case 2:
-        getline(myFile, text, '\t');
-        tempTeam.setSeatingCapacity(text);
+        tempTeam.setSeatingCapacity(list[num]);
         break;
     case 3:
-        getline(myFile, text, '\t');
-        tempTeam.setLocation(text);
+        tempTeam.setLocation(list[num]);
         break;
     case 4:
-        getline(myFile, text, '\t');
-        tempTeam.setConference(text);
+        tempTeam.setConference(list[num]);
         break;
     case 5:
-        getline(myFile, text, '\t');
-        tempTeam.setDivision(text);
+        tempTeam.setDivision(list[num]);
         break;
     case 6:
-        getline(myFile, text, '\t');
-        tempTeam.setSurfaceType(text);
+        tempTeam.setSurfaceType(list[num]);
         break;
     case 7:
-        getline(myFile, text, '\t');
-        tempTeam.setStadiumRoofType(text);
+        tempTeam.setStadiumRoofType(list[num]);
         break;
     case 8:
-        getline(myFile, text, '\n');
-        tempTeam.setDateOpened(text);
+        tempTeam.setDateOpened(list[num]);
         break;
     default:
+        cout << "Warning: Football Info Out Of Scope!" << endl;
         break;
     }
 

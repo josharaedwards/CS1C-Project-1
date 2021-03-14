@@ -7,43 +7,45 @@
 #include <iostream>
 #include <string>
 #include <QDataStream>
+#include <QFile>
+#include <QTextStream>
 using namespace std;
 
 class Football
 {
-    string teamName;
-    string stadiumName;
-    string seatingCapacity;
-    string location;
-    string conference;
-    string division;
-    string surfaceType;
-    string stadiumRoofType;
-    string dateOpened;
+    QString teamName;
+    QString stadiumName;
+    QString seatingCapacity;
+    QString location;
+    QString conference;
+    QString division;
+    QString surfaceType;
+    QString stadiumRoofType;
+    QString dateOpened;
 
 public:
     Football();
-    Football(string oTN, string oSN, string oSC, string oL, string oC, string oD, string oST, string oSRT, string oDO);
+    Football(QString oTN, QString oSN, QString oSC, QString oL, QString oC, QString oD, QString oST, QString oSRT, QString oDO);
 
-    void setTeamName(string oTN);
-    void setStadiumName(string oSN);
-    void setSeatingCapacity(string oSC);
-    void setLocation(string oL);
-    void setConference(string oC);
-    void setDivision(string oD);
-    void setSurfaceType(string oST);
-    void setStadiumRoofType(string oSRT);
-    void setDateOpened(string oDO);
+    void setTeamName(QString oTN);
+    void setStadiumName(QString oSN);
+    void setSeatingCapacity(QString oSC);
+    void setLocation(QString oL);
+    void setConference(QString oC);
+    void setDivision(QString oD);
+    void setSurfaceType(QString oST);
+    void setStadiumRoofType(QString oSRT);
+    void setDateOpened(QString oDO);
 
-    string getTeamName();
-    string getStadiumName();
-    string getSeatingCapacity();
-    string getLocation();
-    string getConference();
-    string getDivision();
-    string getSurfaceType();
-    string getStadiumRoofType();
-    string getDateOpened();
+    QString getTeamName();
+    QString getStadiumName();
+    QString getSeatingCapacity();
+    QString getLocation();
+    QString getConference();
+    QString getDivision();
+    QString getSurfaceType();
+    QString getStadiumRoofType();
+    QString getDateOpened();
 };
 
 #endif // FOOTBALL_H

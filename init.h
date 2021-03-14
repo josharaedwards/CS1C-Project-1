@@ -4,8 +4,10 @@
 #include "football.h"
 #include "sort.h"
 
-QVector<Football> fileRead(string fileName);
+vector<Football> fileRead(QString fileName);
 
-Football updateFromFile(ifstream& myFile, int lineNum, Football tempTeam);
+Football processLine(Football tempTeam, QString line);
+
+Football updateFootballInfo(Football& tempTeam, QStringList list, int num);
 
 #endif // INIT_H

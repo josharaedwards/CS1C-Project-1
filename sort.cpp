@@ -120,10 +120,10 @@ QVector<Football> sortByLocation(QVector<Football> footballTeams)
     return footballTeams;
 }
 
-bool isGreaterThan(string first, string second)
+bool isGreaterThan(QString first, QString second)
 {
-    char firstLetter = first[0];
-    char secondLetter = second[0];
+    QChar firstLetter = first[0];
+    QChar secondLetter = second[0];
 
     if(firstLetter > secondLetter)
     {
@@ -154,7 +154,8 @@ int totalCapacity(QVector<Football> footballTeams)
 
     for (int i = 0; i < numOfEntries; i++)
     {
-        int num = stoi(footballTeams[i].getSeatingCapacity());
+        QString seatingCapacity = footballTeams[i].getSeatingCapacity();
+        int num = seatingCapacity.toInt();
         sum += num;
     }
 
@@ -164,7 +165,7 @@ int totalCapacity(QVector<Football> footballTeams)
 QVector<Football> sortByRoofType(QVector<Football> footballTeams)
 {
     //choose stadium Roof type
-    string roofType;
+    QString roofType;
 
     int numOfEntries = footballTeams.size();
 
@@ -182,7 +183,7 @@ QVector<Football> sortByRoofType(QVector<Football> footballTeams)
 QVector<Football> sortByLeague(QVector<Football> footballTeams)
 {
     //choose by league NFL or AFC
-    string selectedLeague;
+    QString selectedLeague;
 
     int numOfEntries = footballTeams.size();
 
