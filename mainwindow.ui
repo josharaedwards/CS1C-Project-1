@@ -697,22 +697,17 @@ QPushButton:hover {
       </column>
       <column>
        <property name="text">
-        <string>New Column</string>
+        <string>Surface Type</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Stadium roof type</string>
+        <string>Stadium Roof Type</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Date opened</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Expansion</string>
+        <string>Date Opened</string>
        </property>
       </column>
       <item row="0" column="0">

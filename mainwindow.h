@@ -15,6 +15,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void populateSortCells();
+
 public slots:
     void displayAdmin();
     void displayHome();
