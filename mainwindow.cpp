@@ -64,7 +64,7 @@ void MainWindow::displayHelp()
         "Using this pamplet is simple with just a few clicks!"
         "\n\n• The tabs on the side allow you to find the content that you need with ease."
         "\n\n• Using our sorting feature, you can see the football teams sorted by alphabetical order, NFL or AFL, stadiums capacity and more."
-        "\n\n• If you have any trouble using the pamplet or simply want to contact us to request a new feature, please fill up the contact sheet! We would love to hear from you."
+        "\n\n• If you have any trouble using the pamphlet or simply want to contact us to request a new feature, please fill up the contact sheet! We would love to hear from you."
     );
 
     msgBox.exec();
