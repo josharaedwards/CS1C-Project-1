@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     this->displayHome();
+    ui->loginPanel->raise();
 
     footballTeams =  fileRead("C:/Users/josha/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
 }
@@ -76,6 +77,32 @@ void MainWindow::displayContact()
 
     contact->setAttribute(Qt::WA_DeleteOnClose);
     contact->show();
+}
+
+void MainWindow::adminPasswordAuth()
+{
+    if (this->ui->adminPwdInput->text() == "password")
+    {
+        this->ui->loginPanel->hide();
+    }
+    else
+    {
+        this->ui->adminPwdInput->setText("");
+
+        QMessageBox msgBox;
+
+        msgBox.setStyleSheet("QMessageBox { font: 75 10pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64); }");
+        msgBox.setWindowTitle("Invalid password");
+        msgBox.setText("The password was incorrect. Please try again!");
+
+        msgBox.exec();
+    }
+}
+
+
+void MainWindow::adminPasswordClear()
+{
+    this->ui->adminPwdInput->setText("");
 }
 
 void MainWindow::populateSortCells()

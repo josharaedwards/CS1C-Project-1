@@ -23,6 +23,8 @@ public slots:
     void displaySort();
     void displayHelp();
     void displayContact();
+    void adminPasswordAuth();
+    void adminPasswordClear();
 
 private:
     Ui::MainWindow *ui;
