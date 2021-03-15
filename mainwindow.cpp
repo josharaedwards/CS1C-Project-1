@@ -1,7 +1,9 @@
 #include "mainwindow.h"
 #include "contactsheet.h"
+#include "loginerrorprompt.h"
 #include "ui_mainwindow.h"
 #include "ui_contactsheet.h"
+#include "ui_loginerrorprompt.h"
 #include "init.h"
 
 #include <QMessageBox>
@@ -89,13 +91,10 @@ void MainWindow::adminPasswordAuth()
     {
         this->ui->adminPwdInput->setText("");
 
-        QMessageBox msgBox;
+        LoginErrorPrompt *prompt = new LoginErrorPrompt;
 
-        msgBox.setStyleSheet("QMessageBox { font: 75 10pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64); }");
-        msgBox.setWindowTitle("Invalid password");
-        msgBox.setText("The password was incorrect. Please try again!");
-
-        msgBox.exec();
+        prompt->setAttribute(Qt::WA_DeleteOnClose);
+        prompt->show();
     }
 }
 
