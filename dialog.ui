@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>LoginErrorPrompt</class>
- <widget class="QWidget" name="LoginErrorPrompt">
+ <class>Dialog</class>
+ <widget class="QWidget" name="Dialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -23,12 +23,12 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Login Error</string>
+   <string>Form</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: rgb(236, 239, 244);</string>
   </property>
-  <widget class="QLabel" name="loginErrorText">
+  <widget class="QLabel" name="dialogText">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -41,13 +41,13 @@
     <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
    </property>
    <property name="text">
-    <string>The password was incorrect. Please try again!</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="loginPromptBtn">
+  <widget class="QPushButton" name="dialogBtn">
    <property name="geometry">
     <rect>
      <x>360</x>
@@ -79,23 +79,23 @@ QPushButton:hover {
  <resources/>
  <connections>
   <connection>
-   <sender>loginPromptBtn</sender>
+   <sender>dialogBtn</sender>
    <signal>clicked()</signal>
-   <receiver>LoginErrorPrompt</receiver>
-   <slot>closeLoginErrorPrompt()</slot>
+   <receiver>Dialog</receiver>
+   <slot>closeDialog()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>437</x>
-     <y>131</y>
+     <x>484</x>
+     <y>78</y>
     </hint>
     <hint type="destinationlabel">
-     <x>438</x>
-     <y>153</y>
+     <x>487</x>
+     <y>102</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>closeLoginErrorPrompt()</slot>
+  <slot>closeDialog()</slot>
  </slots>
 </ui>

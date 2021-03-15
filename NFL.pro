@@ -10,24 +10,24 @@ CONFIG += c++11
 
 SOURCES += \
     contactsheet.cpp \
+    dialog.cpp \
     football.cpp \
     init.cpp \
-    loginerrorprompt.cpp \
     main.cpp \
     mainwindow.cpp \
     sort.cpp
 
 HEADERS += \
     contactsheet.h \
+    dialog.h \
     football.h \
     init.h \
-    loginerrorprompt.h \
     mainwindow.h \
     sort.h
 
 FORMS += \
     contactsheet.ui \
-    loginerrorprompt.ui \
+    dialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.

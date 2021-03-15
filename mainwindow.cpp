@@ -1,9 +1,9 @@
 #include "mainwindow.h"
 #include "contactsheet.h"
-#include "loginerrorprompt.h"
+#include "dialog.h"
 #include "ui_mainwindow.h"
 #include "ui_contactsheet.h"
-#include "ui_loginerrorprompt.h"
+#include "ui_dialog.h"
 #include "init.h"
 
 #include <QMessageBox>
@@ -91,8 +91,9 @@ void MainWindow::adminPasswordAuth()
     {
         this->ui->adminPwdInput->setText("");
 
-        LoginErrorPrompt *prompt = new LoginErrorPrompt;
+        Dialog *prompt = new Dialog(nullptr, "The password was incorrect. Please try again!");
 
+        prompt->setWindowTitle("Login Error");
         prompt->setAttribute(Qt::WA_DeleteOnClose);
         prompt->show();
     }
