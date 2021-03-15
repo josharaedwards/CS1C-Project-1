@@ -24,6 +24,8 @@ void ContactSheet::sendBtnHandler()
     prompt->setWindowTitle("Success");
     prompt->setAttribute(Qt::WA_DeleteOnClose);
     prompt->show();
+
+    this->~ContactSheet();
 }
 
 void ContactSheet::clear()
