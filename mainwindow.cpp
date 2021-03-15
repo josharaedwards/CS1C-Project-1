@@ -1,7 +1,9 @@
 #include "mainwindow.h"
 #include "contactsheet.h"
+#include "dialog.h"
 #include "ui_mainwindow.h"
 #include "ui_contactsheet.h"
+#include "ui_dialog.h"
 #include "init.h"
 
 #include <QMessageBox>
@@ -16,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     this->displayHome();
+    ui->loginPanel->raise();
 
     footballTeams =  fileRead("C:/Users/josha/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
 }
@@ -76,6 +79,30 @@ void MainWindow::displayContact()
 
     contact->setAttribute(Qt::WA_DeleteOnClose);
     contact->show();
+}
+
+void MainWindow::adminPasswordAuth()
+{
+    if (this->ui->adminPwdInput->text() == "password")
+    {
+        this->ui->loginPanel->hide();
+    }
+    else
+    {
+        this->ui->adminPwdInput->setText("");
+
+        Dialog *prompt = new Dialog(nullptr, "The password was incorrect. Please try again!");
+
+        prompt->setWindowTitle("Login Error");
+        prompt->setAttribute(Qt::WA_DeleteOnClose);
+        prompt->show();
+    }
+}
+
+
+void MainWindow::adminPasswordClear()
+{
+    this->ui->adminPwdInput->setText("");
 }
 
 void MainWindow::populateSortCells()

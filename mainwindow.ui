@@ -760,57 +760,57 @@ QPushButton:hover {
        <height>701</height>
       </rect>
      </property>
-     <widget class="QLineEdit" name="adminPwdInput">
+     <widget class="QWidget" name="loginPanel" native="true">
       <property name="geometry">
        <rect>
-        <x>500</x>
-        <y>320</y>
-        <width>181</width>
-        <height>31</height>
+        <x>-1</x>
+        <y>-1</y>
+        <width>1181</width>
+        <height>721</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 75 12pt &quot;Consolas&quot;;
-padding-left: 5;</string>
+       <string notr="true"/>
       </property>
-      <property name="echoMode">
-       <enum>QLineEdit::Password</enum>
-      </property>
-      <property name="placeholderText">
-       <string>Password</string>
-      </property>
-      <property name="clearButtonEnabled">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="adminUsrInput">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>280</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 75 12pt &quot;Consolas&quot;;
-padding-left: 5;</string>
-      </property>
-      <property name="placeholderText">
-       <string>Username</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="loginBtn">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>360</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
+      <widget class="QLineEdit" name="adminPwdInput">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>300</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the administrator's password to modify the data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>Password</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="loginBtn">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>340</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
 	border:none;
 	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(46, 52, 64);
@@ -823,15 +823,53 @@ QPushButton:hover {
 	background-color: rgb(216, 222, 233);
 	color: rgb(46, 52, 64);
 }</string>
-      </property>
-      <property name="text">
-       <string>Login</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="clearBtn">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>380</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
+       </property>
+       <property name="text">
+        <string>Clear</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="adminPanel" native="true">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>0</y>
+        <width>1181</width>
+        <height>701</height>
+       </rect>
       </property>
      </widget>
+     <zorder>adminPanel</zorder>
+     <zorder>loginPanel</zorder>
     </widget>
-    <zorder>adminContent</zorder>
-    <zorder>homeContent</zorder>
-    <zorder>sortContent</zorder>
    </widget>
   </widget>
  </widget>
@@ -917,6 +955,38 @@ QPushButton:hover {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>clearBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>adminPasswordClear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>715</x>
+     <y>402</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>735</x>
+     <y>741</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>loginBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>adminPasswordAuth()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>739</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>774</x>
+     <y>717</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>displayAdmin()</slot>
@@ -924,5 +994,7 @@ QPushButton:hover {
   <slot>displaySort()</slot>
   <slot>displayContact()</slot>
   <slot>displayHelp()</slot>
+  <slot>adminPasswordClear()</slot>
+  <slot>adminPasswordAuth()</slot>
  </slots>
 </ui>
