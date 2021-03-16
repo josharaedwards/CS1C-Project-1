@@ -1,8 +1,8 @@
 #include "init.h"
 
-vector<Football> fileRead(QString fileName)
+QVector<Football> fileRead(QString fileName)
 {
-    vector<Football> footballTeams;
+    QVector<Football> footballTeams;
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))

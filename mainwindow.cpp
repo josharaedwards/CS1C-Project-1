@@ -8,8 +8,9 @@
 
 #include <QMessageBox>
 
-//Global Football Teams Data Holder
-vector<Football> footballTeams;
+//Global Football Teams Data Holders
+QVector<Football> footballTeams;
+QVector<Football> leagueTeams;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -49,7 +50,7 @@ void MainWindow::displaySort()
     int numOfEntries = footballTeams.size();
     this->ui->tableWidget->setRowCount(numOfEntries);
 
-    populateSortCells();
+    populateSortCells(footballTeams);
 
     this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
@@ -67,7 +68,7 @@ void MainWindow::displayHelp()
         "Using this pamplet is simple with just a few clicks!"
         "\n\n• The tabs on the side allow you to find the content that you need with ease."
         "\n\n• Using our sorting feature, you can see the football teams sorted by alphabetical order, NFL or AFL, stadiums capacity and more."
-        "\n\n• If you have any trouble using the pamplet or simply want to contact us to request a new feature, please fill up the contact sheet! We would love to hear from you."
+        "\n\n• If you have any trouble using the pamphlet or simply want to contact us to request a new feature, please fill up the contact sheet! We would love to hear from you."
     );
 
     msgBox.exec();
@@ -105,9 +106,9 @@ void MainWindow::adminPasswordClear()
     this->ui->adminPwdInput->setText("");
 }
 
-void MainWindow::populateSortCells()
+void MainWindow::populateSortCells(QVector<Football> teamList)
 {
-    int numOfEntries = footballTeams.size();
+    int numOfEntries = teamList.size();
 
     for(int i = 1; i < numOfEntries; ++i)
     {
@@ -116,10 +117,48 @@ void MainWindow::populateSortCells()
         for(int j = 0; j < 9; ++j)
         {
             item = new QTableWidgetItem;
-            QString itemText = footballTeams[i].getDataFromIndex(j);
+            QString itemText = teamList[i].getDataFromIndex(j);
             item->setText(itemText);
 
             this->ui->tableWidget->setItem(i - 1, j, item);
         }
     }
+}
+
+void MainWindow::onFilterClick()
+{
+    QString filterBy = this->ui->dataFilterDropdown->currentText();
+
+    if(filterBy == "NFL")
+    {
+        leagueTeams = displayByLeague(footballTeams, true);
+        this->ui->tableWidget->setRowCount(leagueTeams.size());
+        populateSortCells(leagueTeams);
+    }
+    else if(filterBy == "AFC")
+    {
+        leagueTeams = displayByLeague(footballTeams, true);
+        this->ui->tableWidget->setRowCount(leagueTeams.size());
+        populateSortCells(leagueTeams);
+    }
+    else
+    {
+        populateSortCells(footballTeams);
+        this->ui->tableWidget->setRowCount(footballTeams.size());
+    }
+
+}
+
+SortType stringToEnum(QString text)
+{
+    return team;
+}
+
+void MainWindow::onSortClick()
+{
+    QString sortBy = this->ui->dataSortDropdown->currentText();
+
+    SortType sBE = stringToEnum(sortBy);
+
+    sort(footballTeams, sBE);
 }

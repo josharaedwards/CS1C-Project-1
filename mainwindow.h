@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "football.h"
+#include "sort.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,7 +17,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void populateSortCells();
+    void populateSortCells(QVector<Football> teamList);
+    SortType stringToEnum(QString text);
 
 public slots:
     void displayAdmin();
@@ -25,6 +28,9 @@ public slots:
     void displayContact();
     void adminPasswordAuth();
     void adminPasswordClear();
+
+    void onFilterClick();
+    void onSortClick();
 
 private:
     Ui::MainWindow *ui;

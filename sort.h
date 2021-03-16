@@ -16,9 +16,9 @@ QVector<Football> sortBySeating(QVector<Football> footballTeams);
 
 QVector<Football> sortByLocation(QVector<Football> footballTeams);
 
-QVector<Football> sortByLeague(QVector<Football> footballTeams);
-
 QVector<Football> sortByRoofType(QVector<Football> footballTeams);
+
+QVector<Football> displayByLeague(QVector<Football> footballTeams, bool bIsNFL);
 
 bool isGreaterThan(QString first, QString second);
 
