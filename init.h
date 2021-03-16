@@ -4,7 +4,7 @@
 #include "football.h"
 #include "sort.h"
 
-vector<Football> fileRead(QString fileName);
+QVector<Football> fileRead(QString fileName);
 
 Football processLine(Football tempTeam, QString line);
 

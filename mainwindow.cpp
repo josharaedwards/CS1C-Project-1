@@ -8,8 +8,10 @@
 
 #include <QMessageBox>
 
-//Global Football Teams Data Holder
-vector<Football> footballTeams;
+//Global Football Teams Data Holders
+QVector<Football> footballTeams;
+QVector<Football> teamsNFL;
+QVector<Football> teamsAFC;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
