@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->displayHome();
     ui->loginPanel->raise();
 
-    footballTeams =  fileRead("C:/Users/josha/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
+    footballTeams =  fileRead("D:/Documents/Qt/CS1C-Project-1/NFL Information.tsv");
 }
 
 MainWindow::~MainWindow()
@@ -129,24 +129,23 @@ void MainWindow::onFilterClick()
 {
     QString filterBy = this->ui->dataFilterDropdown->currentText();
 
-    if(filterBy == "NFL")
+    if(filterBy == "National Football League (NFL)")
     {
         leagueTeams = displayByLeague(footballTeams, true);
         this->ui->tableWidget->setRowCount(leagueTeams.size());
         populateSortCells(leagueTeams);
     }
-    else if(filterBy == "AFC")
+    else if(filterBy == "American Football Conference (AFC)")
     {
-        leagueTeams = displayByLeague(footballTeams, true);
+        leagueTeams = displayByLeague(footballTeams, false);
         this->ui->tableWidget->setRowCount(leagueTeams.size());
         populateSortCells(leagueTeams);
     }
     else
     {
-        populateSortCells(footballTeams);
         this->ui->tableWidget->setRowCount(footballTeams.size());
+        populateSortCells(footballTeams);
     }
-
 }
 
 SortType MainWindow::stringToEnum(QString text)

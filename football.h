@@ -1,8 +1,3 @@
-/**
- *  @file football.h
- *  @brief class Football and prototypes
- */
-
 #ifndef FOOTBALL_H
 #define FOOTBALL_H
 
@@ -16,7 +11,6 @@
 #include <QTextStream>
 using namespace std;
 
-///Holds and organizes the data read from file
 class Football
 {
     QString teamName;
@@ -32,23 +26,15 @@ class Football
 public:
     Football();
     Football(QString oTN, QString oSN, QString oSC, QString oL, QString oC, QString oD, QString oST, QString oSRT, QString oDO);
-    /// @param oTN Team name
+
     void setTeamName(QString oTN);
-    ///@param oSN Stadium name
     void setStadiumName(QString oSN);
-    ///@param oSC Seating capacity
     void setSeatingCapacity(QString oSC);
-    ///@param oL Location
     void setLocation(QString oL);
-    ///@param oC Conference
     void setConference(QString oC);
-    ///@param oD Division
     void setDivision(QString oD);
-    ///@param oST Surface Type
     void setSurfaceType(QString oST);
-    ///@param oSRT Stadium roof type
     void setStadiumRoofType(QString oSRT);
-    ///@param oDO Date Opened
     void setDateOpened(QString oDO);
 
     QString getTeamName();
