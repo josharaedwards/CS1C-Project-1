@@ -6,22 +6,22 @@ QVector<Football> sort(QVector<Football> footballTeams, SortType sortBy)
     switch(sortBy)
     {
     case team:
-        sortByTeam(footballTeams);
+        footballTeams = sortByTeam(footballTeams);
         break;
     case stadium:
-        sortByStadium(footballTeams);
+        footballTeams = sortByStadium(footballTeams);
         break;
     case seating:
-        sortBySeating(footballTeams);
+        footballTeams = sortBySeating(footballTeams);
         break;
     case location:
-        sortByLocation(footballTeams);
+        footballTeams = sortByLocation(footballTeams);
         break;
     case league:
-        sortByLocation(footballTeams);
+        footballTeams = sortByLocation(footballTeams);
         break;
     case rooftype:
-        sortByRoofType(footballTeams);
+        footballTeams = sortByRoofType(footballTeams);
         break;
     }
 
@@ -32,7 +32,7 @@ QVector<Football> sortByTeam(QVector<Football> footballTeams)
 {
     int numOfEntries = footballTeams.size();
 
-    for(int i = 0; i < numOfEntries - 1; ++i)
+    for(int i = 1; i < numOfEntries - 1; ++i)
     {
         for(int j = i + 1; j < numOfEntries; ++j)
         {
@@ -55,7 +55,7 @@ QVector<Football> sortByStadium(QVector<Football> footballTeams)
 {
     int numOfEntries = footballTeams.size();
 
-    for(int i = 0; i < numOfEntries - 1; ++i)
+    for(int i = 1; i < numOfEntries - 1; ++i)
     {
         for(int j = i + 1; j < numOfEntries; ++j)
         {
@@ -78,7 +78,7 @@ QVector<Football> sortBySeating(QVector<Football> footballTeams)
 {
     int numOfEntries = footballTeams.size();
 
-    for(int i = 0; i < numOfEntries - 1; ++i)
+    for(int i = 1; i < numOfEntries - 1; ++i)
     {
         for(int j = i + 1; j < numOfEntries; ++j)
         {
@@ -101,7 +101,7 @@ QVector<Football> sortByLocation(QVector<Football> footballTeams)
 {
     int numOfEntries = footballTeams.size();
 
-    for(int i = 0; i < numOfEntries - 1; ++i)
+    for(int i = 1; i < numOfEntries - 1; ++i)
     {
         for(int j = i + 1; j < numOfEntries; ++j)
         {
@@ -120,60 +120,23 @@ QVector<Football> sortByLocation(QVector<Football> footballTeams)
     return footballTeams;
 }
 
-bool isGreaterThan(QString first, QString second)
-{
-    QChar firstLetter = first[0];
-    QChar secondLetter = second[0];
-
-    if(firstLetter > secondLetter)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-bool isGreaterThan(int first, int second)
-{
-    if(first > second)
-    {
-        return true;
-    }
-    else
-    {
-        return false;
-    }
-}
-
-int totalCapacity(QVector<Football> footballTeams)
-{
-    int numOfEntries = footballTeams.size();
-    int sum = 0;
-
-    for (int i = 0; i < numOfEntries; i++)
-    {
-        QString seatingCapacity = footballTeams[i].getSeatingCapacity();
-        int num = seatingCapacity.toInt();
-        sum += num;
-    }
-
-    return sum;
-}
-
 QVector<Football> sortByRoofType(QVector<Football> footballTeams)
 {
-    //choose stadium Roof type
-    QString roofType;
-
     int numOfEntries = footballTeams.size();
 
-    for(int i = 0; i <numOfEntries; i++)
+    for(int i = 1; i < numOfEntries - 1; ++i)
     {
-        if(footballTeams[i].getStadiumRoofType() == roofType)
+        for(int j = i + 1; j < numOfEntries; ++j)
         {
-             //QTextStream(stdout) << footballTeams[i].getStadiumName() << "   " << footballTeams[i].getStadiumRoofType();
+            bool result = isGreaterThan(footballTeams[i].getStadiumRoofType(), footballTeams[j].getStadiumRoofType());
+            Football temp;
+
+            if(result)
+            {
+                temp = footballTeams[i];
+                footballTeams[i] = footballTeams[j];
+                footballTeams[j] = temp;
+            }
         }
     }
 
@@ -206,3 +169,48 @@ QVector<Football> displayByLeague(QVector<Football> defaultTeamList, bool bIsNFC
 
     return updatedList;
 }
+
+bool isGreaterThan(QString first, QString second)
+{
+    QChar firstLetter = first[0];
+    QChar secondLetter = second[0];
+
+    if(firstLetter > secondLetter)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+bool isGreaterThan(int first, int second)
+{
+    if(first > second)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+int totalCapacity(QVector<Football> footballTeams)
+{
+    int numOfEntries = footballTeams.size();
+    int num = 0;
+    int sum = 0;
+
+    for (int i = 0; i < numOfEntries; i++)
+    {
+        QString seatingCapacity = footballTeams[i].getSeatingCapacity();
+        num = seatingCapacity.toInt();
+        sum += num;
+    }
+
+    return sum;
+}
+
+
