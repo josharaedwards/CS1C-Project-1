@@ -19,6 +19,7 @@ public:
 
     void populateSortCells(QVector<Football> teamList);
     SortType stringToEnum(QString text);
+    void totalUpdate(QVector<Football> footballTeam);
 
 public slots:
     void displayAdmin();
