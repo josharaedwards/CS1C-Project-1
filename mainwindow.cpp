@@ -140,17 +140,20 @@ void MainWindow::onFilterClick()
         leagueTeams = displayByLeague(sortedTeams, true);
         this->ui->tableWidget->setRowCount(leagueTeams.size());
         populateSortCells(leagueTeams);
+        totalUpdate(leagueTeams);
     }
     else if(filterBy == "American Football Conference (AFC)")
     {
         leagueTeams = displayByLeague(sortedTeams, false);
         this->ui->tableWidget->setRowCount(leagueTeams.size());
         populateSortCells(leagueTeams);
+        totalUpdate(leagueTeams);
     }
     else
     {
         this->ui->tableWidget->setRowCount(sortedTeams.size());
         populateSortCells(sortedTeams);
+        totalUpdate(sortedTeams);
     }
 }
 
@@ -186,4 +189,13 @@ void MainWindow::onSortClick()
     this->ui->tableWidget->setRowCount(sortedTeams.size());
 
     populateSortCells(sortedTeams);
+
+    totalUpdate(sortedTeams);
+}
+
+void MainWindow::totalUpdate(QVector<Football> footballTeam)
+{
+    int totalDisplay = totalCapacity(footballTeam);
+
+    //Display this onto the UI here
 }
