@@ -1,3 +1,9 @@
+/**
+ *  @file init.h
+ *  @brief Functions for: read from file, initialization from a file and updating data
+ *
+ */
+
 #include "init.h"
 
 QVector<Football> fileRead(QString fileName)
