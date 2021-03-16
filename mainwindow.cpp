@@ -10,6 +10,7 @@
 
 //Global Football Teams Data Holders
 QVector<Football> footballTeams;
+QVector<Football> sortedTeams;
 QVector<Football> leagueTeams;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -51,6 +52,11 @@ void MainWindow::displaySort()
     this->ui->tableWidget->setRowCount(numOfEntries);
 
     populateSortCells(footballTeams);
+
+    for(int i = 0; i < numOfEntries; ++i)
+    {
+        sortedTeams.push_back(footballTeams[i]);
+    }
 
     this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
@@ -131,25 +137,43 @@ void MainWindow::onFilterClick()
 
     if(filterBy == "National Football League (NFL)")
     {
-        leagueTeams = displayByLeague(footballTeams, true);
+        leagueTeams = displayByLeague(sortedTeams, true);
         this->ui->tableWidget->setRowCount(leagueTeams.size());
         populateSortCells(leagueTeams);
     }
     else if(filterBy == "American Football Conference (AFC)")
     {
-        leagueTeams = displayByLeague(footballTeams, false);
+        leagueTeams = displayByLeague(sortedTeams, false);
         this->ui->tableWidget->setRowCount(leagueTeams.size());
         populateSortCells(leagueTeams);
     }
     else
     {
-        this->ui->tableWidget->setRowCount(footballTeams.size());
-        populateSortCells(footballTeams);
+        this->ui->tableWidget->setRowCount(sortedTeams.size());
+        populateSortCells(sortedTeams);
     }
 }
 
 SortType MainWindow::stringToEnum(QString text)
 {
+    if(text == "Team Name")
+    {
+        return team;
+    }
+    else if(text == "Stadium Name")
+    {
+        return stadium;
+    }
+    else if(text == "Seating Capacity")
+    {
+        return seating;
+    }
+    else if(text == "Location")
+    {
+        return location;
+    }
+
+    //If we have an unpredictable string
     return team;
 }
 
@@ -157,5 +181,9 @@ void MainWindow::onSortClick()
 {
     QString sortBy = this->ui->dataSortDropdown->currentText();
 
-    sort(footballTeams, stringToEnum(sortBy));
+    sortedTeams = sort(footballTeams, stringToEnum(sortBy));
+
+    this->ui->tableWidget->setRowCount(sortedTeams.size());
+
+    populateSortCells(sortedTeams);
 }
