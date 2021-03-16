@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->displayHome();
     ui->loginPanel->raise();
 
-    footballTeams =  fileRead("D:/Documents/Qt/CS1C-Project-1/NFL Information.tsv");
+    footballTeams =  fileRead("C:/Users/Channel 3/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
 }
 
 MainWindow::~MainWindow()
