@@ -12,7 +12,6 @@ Football::Football()
     stadiumRoofType = "None";
     dateOpened = "0";
 }
-
 Football::Football(QString oTN, QString oSN, QString oSC, QString oL, QString oC, QString oD, QString oST, QString oSRT, QString oDO)
 {
     teamName = oTN;
@@ -116,6 +115,8 @@ QString Football::getDateOpened()
     return dateOpened;
 }
 
+///switch statement that organizes the data according user`s choices
+///Parameter: "num" is the choice made by user
 QString Football::getDataFromIndex(int num)
 {
     QString data;
