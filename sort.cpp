@@ -6,22 +6,22 @@ QVector<Football> sort(QVector<Football> footballTeams, SortType sortBy)
     switch(sortBy)
     {
     case team:
-        sortByTeam(footballTeams);
+        footballTeams = sortByTeam(footballTeams);
         break;
     case stadium:
-        sortByStadium(footballTeams);
+        footballTeams = sortByStadium(footballTeams);
         break;
     case seating:
-        sortBySeating(footballTeams);
+        footballTeams = sortBySeating(footballTeams);
         break;
     case location:
-        sortByLocation(footballTeams);
+        footballTeams = sortByLocation(footballTeams);
         break;
     case league:
-        sortByLocation(footballTeams);
+        footballTeams = sortByLocation(footballTeams);
         break;
     case rooftype:
-        sortByRoofType(footballTeams);
+        footballTeams = sortByRoofType(footballTeams);
         break;
     }
 
