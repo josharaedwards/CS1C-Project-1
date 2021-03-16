@@ -1,8 +1,3 @@
-/**
- *  @file mainwindow.h
- *  @brief Declares and specifies the widgets and slots for the GUI
- */
-
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -10,7 +5,6 @@
 #include "football.h"
 #include "sort.h"
 
-///GUI main page
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

@@ -870,6 +870,9 @@ QPushButton:hover {
      <zorder>adminPanel</zorder>
      <zorder>loginPanel</zorder>
     </widget>
+    <zorder>homeContent</zorder>
+    <zorder>adminContent</zorder>
+    <zorder>sortContent</zorder>
    </widget>
   </widget>
  </widget>
@@ -987,6 +990,38 @@ QPushButton:hover {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>dataFilterBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onFilterClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>521</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>536</x>
+     <y>6</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dataSortBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onSortClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>964</x>
+     <y>27</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>985</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>displayAdmin()</slot>
@@ -996,5 +1031,7 @@ QPushButton:hover {
   <slot>displayHelp()</slot>
   <slot>adminPasswordClear()</slot>
   <slot>adminPasswordAuth()</slot>
+  <slot>onFilterClick()</slot>
+  <slot>onSortClick()</slot>
  </slots>
 </ui>

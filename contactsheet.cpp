@@ -5,9 +5,6 @@
 
 #include <QMessageBox>
 
-///Contact sheet GUI allows the user to send inquiries and questions.
-///The window prompt the user to fill in boxes such as full name, e-mail and message. When the message is sent a pop up window let
-///the user know that was suscesfully sent
 ContactSheet::ContactSheet(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ContactSheet)
