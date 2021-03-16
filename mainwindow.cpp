@@ -149,7 +149,7 @@ void MainWindow::onFilterClick()
 
 }
 
-SortType stringToEnum(QString text)
+SortType MainWindow::stringToEnum(QString text)
 {
     return team;
 }
@@ -158,7 +158,5 @@ void MainWindow::onSortClick()
 {
     QString sortBy = this->ui->dataSortDropdown->currentText();
 
-    SortType sBE = stringToEnum(sortBy);
-
-    sort(footballTeams, sBE);
+    sort(footballTeams, stringToEnum(sortBy));
 }
