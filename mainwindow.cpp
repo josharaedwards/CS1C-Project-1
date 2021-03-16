@@ -10,8 +10,7 @@
 
 //Global Football Teams Data Holders
 QVector<Football> footballTeams;
-QVector<Football> teamsNFL;
-QVector<Football> teamsAFC;
+QVector<Football> leagueTeams;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
