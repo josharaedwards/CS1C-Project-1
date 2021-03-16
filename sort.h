@@ -1,10 +1,20 @@
+/**
+ *  @file sort.h
+ *  @brief Functions to organize the data read from file
+ *
+ */
+
 #ifndef SORT_H
 #define SORT_H
 
 #include "football.h"
 
-//Enum for the different sorting types
+///Enum
+///Handle the user`s choices to filter the search
 enum SortType{team, stadium, seating, location, league, rooftype};
+
+///The following functions prototypes sort the data according user choices.
+///Parameters: Qvector <Football> Dynamic array
 
 QVector<Football> sort(QVector<Football> footballTeams, SortType sortBy);
 

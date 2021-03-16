@@ -145,8 +145,8 @@ QPushButton:hover {
    <slot>sendBtnHandler()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>322</x>
-     <y>582</y>
+     <x>323</x>
+     <y>439</y>
     </hint>
     <hint type="destinationlabel">
      <x>798</x>
@@ -154,8 +154,25 @@ QPushButton:hover {
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ContactSheet</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>434</x>
+     <y>412</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>441</x>
+     <y>498</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>sendBtnHandler()</slot>
+  <slot>clear()</slot>
  </slots>
 </ui>
