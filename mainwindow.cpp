@@ -50,7 +50,7 @@ void MainWindow::displaySort()
     int numOfEntries = footballTeams.size();
     this->ui->tableWidget->setRowCount(numOfEntries);
 
-    populateSortCells();
+    populateSortCells(footballTeams);
 
     this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
@@ -106,9 +106,9 @@ void MainWindow::adminPasswordClear()
     this->ui->adminPwdInput->setText("");
 }
 
-void MainWindow::populateSortCells()
+void MainWindow::populateSortCells(QVector<Football> teamList)
 {
-    int numOfEntries = footballTeams.size();
+    int numOfEntries = teamList.size();
 
     for(int i = 1; i < numOfEntries; ++i)
     {
@@ -117,10 +117,48 @@ void MainWindow::populateSortCells()
         for(int j = 0; j < 9; ++j)
         {
             item = new QTableWidgetItem;
-            QString itemText = footballTeams[i].getDataFromIndex(j);
+            QString itemText = teamList[i].getDataFromIndex(j);
             item->setText(itemText);
 
             this->ui->tableWidget->setItem(i - 1, j, item);
         }
     }
+}
+
+void MainWindow::onFilterClick()
+{
+    QString filterBy = this->ui->dataFilterDropdown->currentText();
+
+    if(filterBy == "NFL")
+    {
+        leagueTeams = displayByLeague(footballTeams, true);
+        this->ui->tableWidget->setRowCount(leagueTeams.size());
+        populateSortCells(leagueTeams);
+    }
+    else if(filterBy == "AFC")
+    {
+        leagueTeams = displayByLeague(footballTeams, true);
+        this->ui->tableWidget->setRowCount(leagueTeams.size());
+        populateSortCells(leagueTeams);
+    }
+    else
+    {
+        populateSortCells(footballTeams);
+        this->ui->tableWidget->setRowCount(footballTeams.size());
+    }
+
+}
+
+SortType stringToEnum(QString text)
+{
+    return team;
+}
+
+void MainWindow::onSortClick()
+{
+    QString sortBy = this->ui->dataSortDropdown->currentText();
+
+    SortType sBE = stringToEnum(sortBy);
+
+    sort(footballTeams, sBE);
 }
