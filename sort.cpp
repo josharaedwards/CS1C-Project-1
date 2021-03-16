@@ -180,21 +180,29 @@ QVector<Football> sortByRoofType(QVector<Football> footballTeams)
     return footballTeams;
 }
 
-QVector<Football> sortByLeague(QVector<Football> footballTeams)
+QVector<Football> displayByLeague(QVector<Football> defaultTeamList, bool bIsNFC)
 {
-    //choose by league NFL or AFC
-    QString selectedLeague;
+    QVector<Football> updatedList;
 
-    int numOfEntries = footballTeams.size();
+    int numOfEntries = defaultTeamList.size();
 
     for(int i = 0; i <numOfEntries; i++)
     {
-        if(footballTeams[i].getDivision() == selectedLeague)
+        if(bIsNFC)
         {
-            //QTextStream(stdout) <<footballTeams[i].getDivision() << " " << footballTeams[i].getTeamName() << " " << footballTeams[i].getStadiumName() << " " << footballTeams[i].getSeatingCapacity() << " " << footballTeams[i].getLocation() << " " << footballTeams[i].getConference() << " " << footballTeams[i].getSurfaceType() << " " << footballTeams[i].getStadiumRoofType() << " " << footballTeams[i].getDateOpened();
-
+            if(defaultTeamList[i].getConference() == "National Football Conference")
+            {
+                updatedList.push_back(defaultTeamList[i]);
+            }
+        }
+        else
+        {
+            if(defaultTeamList[i].getConference() == "American Football Conference")
+            {
+                updatedList.push_back(defaultTeamList[i]);
+            }
         }
     }
 
-    return footballTeams;
+    return updatedList;
 }

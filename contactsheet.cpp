@@ -1,5 +1,7 @@
 #include "contactsheet.h"
+#include "dialog.h"
 #include "ui_contactsheet.h"
+#include "ui_dialog.h"
 
 #include <QMessageBox>
 
@@ -20,13 +22,13 @@ ContactSheet::~ContactSheet()
 
 void ContactSheet::sendBtnHandler()
 {
-    QMessageBox msgBox;
+    Dialog *prompt = new Dialog(nullptr, "Message sent successfully!");
 
-    msgBox.setStyleSheet("QMessageBox { font: 75 10pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64); }");
-    msgBox.setWindowTitle("Success");
-    msgBox.setText("Message sent successfully!");
+    prompt->setWindowTitle("Success");
+    prompt->setAttribute(Qt::WA_DeleteOnClose);
+    prompt->show();
 
-    msgBox.exec();
+    this->~ContactSheet();
 }
 
 void ContactSheet::clear()
