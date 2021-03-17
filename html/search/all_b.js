@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ui_59',['Ui',['../namespace_ui.html',1,'']]],
-  ['updatefootballinfo_60',['updateFootballInfo',['../init_8cpp.html#a48e69591d0ec65e85ab9a184b3026692',1,'updateFootballInfo(Football &amp;tempTeam, QStringList list, int num):&#160;init.cpp'],['../init_8h.html#a48e69591d0ec65e85ab9a184b3026692',1,'updateFootballInfo(Football &amp;tempTeam, QStringList list, int num):&#160;init.cpp']]]
+  ['rooftype_49',['rooftype',['../sort_8h.html#ad7fca38b521558f128d4a566729f5803ace1b4b1a1f19ce78a180205d2847abed',1,'sort.h']]]
 ];

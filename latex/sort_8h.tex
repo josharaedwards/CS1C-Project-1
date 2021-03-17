@@ -1,0 +1,159 @@
+\hypertarget{sort_8h}{}\doxysection{sort.\+h File Reference}
+\label{sort_8h}\index{sort.h@{sort.h}}
+
+
+Functions to organize the data read from file.  
+
+
+{\ttfamily \#include \char`\"{}football.\+h\char`\"{}}\newline
+Include dependency graph for sort.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803}{Sort\+Type}} \{ \newline
+\mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803acc93d3648a3b2fe40f7fe85bf12fac2f}{team}}
+, \mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803a44937aa25e97f4a5f1f55590749764d7}{stadium}}
+, \mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803aa2d360e81b8e9f0e5311e53576cbe937}{seating}}
+, \mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803a83f95e3d3608762f1eef2ca643a53d8c}{location}}
+, \newline
+\mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803a29c3891bb3d5ccfe65344df5463b8fed}{league}}
+, \mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803ace1b4b1a1f19ce78a180205d2847abed}{rooftype}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{sort_8h_a96d4cb0ef4e3d7c1d13ce7395284b6e6}{sort}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}}, \mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803}{Sort\+Type}} sort\+By)
+\item 
+QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{sort_8h_ab92ac1061c192fea93d9be681e07deeb}{sort\+By\+Team}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}})
+\item 
+QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{sort_8h_a824b73824d1d935f60989f9c87b71b1f}{sort\+By\+Stadium}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}})
+\item 
+QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{sort_8h_af639294f422997600239a630988315f9}{sort\+By\+Seating}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}})
+\item 
+QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{sort_8h_a89dd291b874271baabcb3cc9fe7e560c}{sort\+By\+Location}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}})
+\item 
+QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{sort_8h_a26258abf7469600e321edf2ceb249c30}{sort\+By\+Roof\+Type}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}})
+\item 
+QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{sort_8h_a08ad2ce3a8daad33b2d57d4fc47acbee}{display\+By\+League}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}}, bool b\+Is\+NFL)
+\item 
+bool \mbox{\hyperlink{sort_8h_ab92e58b3497485c94a6b765df9db9f02}{is\+Greater\+Than}} (QString first, QString second)
+\item 
+bool \mbox{\hyperlink{sort_8h_ac508e53d80ea3e40518502887fb8663e}{is\+Greater\+Than}} (int first, int second)
+\item 
+bool \mbox{\hyperlink{sort_8h_a5c09b313e479f1cbf6c118c8a1681618}{find}} (QVector$<$ QString $>$ stadiums, QString compare)
+\item 
+int \mbox{\hyperlink{sort_8h_a75c465491e2c95e78598166ccb3dfd18}{total\+Capacity}} (QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$ \mbox{\hyperlink{mainwindow_8cpp_a961b93ee614ec6a62729d696d9b4d30b}{football\+Teams}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions to organize the data read from file. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{sort_8h_ad7fca38b521558f128d4a566729f5803}\label{sort_8h_ad7fca38b521558f128d4a566729f5803}} 
+\index{sort.h@{sort.h}!SortType@{SortType}}
+\index{SortType@{SortType}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{SortType}{SortType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803}{Sort\+Type}}}
+
+Enum Handle the user\`{}s choices to filter the search \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{team@{team}!sort.h@{sort.h}}\index{sort.h@{sort.h}!team@{team}}}\mbox{\Hypertarget{sort_8h_ad7fca38b521558f128d4a566729f5803acc93d3648a3b2fe40f7fe85bf12fac2f}\label{sort_8h_ad7fca38b521558f128d4a566729f5803acc93d3648a3b2fe40f7fe85bf12fac2f}} 
+team&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{stadium@{stadium}!sort.h@{sort.h}}\index{sort.h@{sort.h}!stadium@{stadium}}}\mbox{\Hypertarget{sort_8h_ad7fca38b521558f128d4a566729f5803a44937aa25e97f4a5f1f55590749764d7}\label{sort_8h_ad7fca38b521558f128d4a566729f5803a44937aa25e97f4a5f1f55590749764d7}} 
+stadium&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{seating@{seating}!sort.h@{sort.h}}\index{sort.h@{sort.h}!seating@{seating}}}\mbox{\Hypertarget{sort_8h_ad7fca38b521558f128d4a566729f5803aa2d360e81b8e9f0e5311e53576cbe937}\label{sort_8h_ad7fca38b521558f128d4a566729f5803aa2d360e81b8e9f0e5311e53576cbe937}} 
+seating&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{location@{location}!sort.h@{sort.h}}\index{sort.h@{sort.h}!location@{location}}}\mbox{\Hypertarget{sort_8h_ad7fca38b521558f128d4a566729f5803a83f95e3d3608762f1eef2ca643a53d8c}\label{sort_8h_ad7fca38b521558f128d4a566729f5803a83f95e3d3608762f1eef2ca643a53d8c}} 
+location&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{league@{league}!sort.h@{sort.h}}\index{sort.h@{sort.h}!league@{league}}}\mbox{\Hypertarget{sort_8h_ad7fca38b521558f128d4a566729f5803a29c3891bb3d5ccfe65344df5463b8fed}\label{sort_8h_ad7fca38b521558f128d4a566729f5803a29c3891bb3d5ccfe65344df5463b8fed}} 
+league&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{rooftype@{rooftype}!sort.h@{sort.h}}\index{sort.h@{sort.h}!rooftype@{rooftype}}}\mbox{\Hypertarget{sort_8h_ad7fca38b521558f128d4a566729f5803ace1b4b1a1f19ce78a180205d2847abed}\label{sort_8h_ad7fca38b521558f128d4a566729f5803ace1b4b1a1f19ce78a180205d2847abed}} 
+rooftype&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sort_8h_a08ad2ce3a8daad33b2d57d4fc47acbee}\label{sort_8h_a08ad2ce3a8daad33b2d57d4fc47acbee}} 
+\index{sort.h@{sort.h}!displayByLeague@{displayByLeague}}
+\index{displayByLeague@{displayByLeague}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{displayByLeague()}{displayByLeague()}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_football}{Football}}$>$ display\+By\+League (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams,  }\item[{bool}]{b\+Is\+NFL }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_a5c09b313e479f1cbf6c118c8a1681618}\label{sort_8h_a5c09b313e479f1cbf6c118c8a1681618}} 
+\index{sort.h@{sort.h}!find@{find}}
+\index{find@{find}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily bool find (\begin{DoxyParamCaption}\item[{QVector$<$ QString $>$}]{stadiums,  }\item[{QString}]{compare }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_ac508e53d80ea3e40518502887fb8663e}\label{sort_8h_ac508e53d80ea3e40518502887fb8663e}} 
+\index{sort.h@{sort.h}!isGreaterThan@{isGreaterThan}}
+\index{isGreaterThan@{isGreaterThan}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{isGreaterThan()}{isGreaterThan()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool is\+Greater\+Than (\begin{DoxyParamCaption}\item[{int}]{first,  }\item[{int}]{second }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_ab92e58b3497485c94a6b765df9db9f02}\label{sort_8h_ab92e58b3497485c94a6b765df9db9f02}} 
+\index{sort.h@{sort.h}!isGreaterThan@{isGreaterThan}}
+\index{isGreaterThan@{isGreaterThan}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{isGreaterThan()}{isGreaterThan()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool is\+Greater\+Than (\begin{DoxyParamCaption}\item[{QString}]{first,  }\item[{QString}]{second }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_a96d4cb0ef4e3d7c1d13ce7395284b6e6}\label{sort_8h_a96d4cb0ef4e3d7c1d13ce7395284b6e6}} 
+\index{sort.h@{sort.h}!sort@{sort}}
+\index{sort@{sort}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_football}{Football}}$>$ sort (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams,  }\item[{\mbox{\hyperlink{sort_8h_ad7fca38b521558f128d4a566729f5803}{Sort\+Type}}}]{sort\+By }\end{DoxyParamCaption})}
+
+The following functions prototypes sort the data according user choices. Parameters\+: Qvector $<$\+Football$>$ Dynamic array \mbox{\Hypertarget{sort_8h_a89dd291b874271baabcb3cc9fe7e560c}\label{sort_8h_a89dd291b874271baabcb3cc9fe7e560c}} 
+\index{sort.h@{sort.h}!sortByLocation@{sortByLocation}}
+\index{sortByLocation@{sortByLocation}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{sortByLocation()}{sortByLocation()}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_football}{Football}}$>$ sort\+By\+Location (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_a26258abf7469600e321edf2ceb249c30}\label{sort_8h_a26258abf7469600e321edf2ceb249c30}} 
+\index{sort.h@{sort.h}!sortByRoofType@{sortByRoofType}}
+\index{sortByRoofType@{sortByRoofType}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{sortByRoofType()}{sortByRoofType()}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_football}{Football}}$>$ sort\+By\+Roof\+Type (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_af639294f422997600239a630988315f9}\label{sort_8h_af639294f422997600239a630988315f9}} 
+\index{sort.h@{sort.h}!sortBySeating@{sortBySeating}}
+\index{sortBySeating@{sortBySeating}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{sortBySeating()}{sortBySeating()}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_football}{Football}}$>$ sort\+By\+Seating (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_a824b73824d1d935f60989f9c87b71b1f}\label{sort_8h_a824b73824d1d935f60989f9c87b71b1f}} 
+\index{sort.h@{sort.h}!sortByStadium@{sortByStadium}}
+\index{sortByStadium@{sortByStadium}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{sortByStadium()}{sortByStadium()}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_football}{Football}}$>$ sort\+By\+Stadium (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_ab92ac1061c192fea93d9be681e07deeb}\label{sort_8h_ab92ac1061c192fea93d9be681e07deeb}} 
+\index{sort.h@{sort.h}!sortByTeam@{sortByTeam}}
+\index{sortByTeam@{sortByTeam}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{sortByTeam()}{sortByTeam()}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{class_football}{Football}}$>$ sort\+By\+Team (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{sort_8h_a75c465491e2c95e78598166ccb3dfd18}\label{sort_8h_a75c465491e2c95e78598166ccb3dfd18}} 
+\index{sort.h@{sort.h}!totalCapacity@{totalCapacity}}
+\index{totalCapacity@{totalCapacity}!sort.h@{sort.h}}
+\doxysubsubsection{\texorpdfstring{totalCapacity()}{totalCapacity()}}
+{\footnotesize\ttfamily int total\+Capacity (\begin{DoxyParamCaption}\item[{QVector$<$ \mbox{\hyperlink{class_football}{Football}} $>$}]{football\+Teams }\end{DoxyParamCaption})}
+

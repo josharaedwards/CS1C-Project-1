@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main_97',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['mainwindow_98',['MainWindow',['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]]
+  ['isgreaterthan_125',['isGreaterThan',['../sort_8cpp.html#ab92e58b3497485c94a6b765df9db9f02',1,'isGreaterThan(QString first, QString second):&#160;sort.cpp'],['../sort_8cpp.html#ac508e53d80ea3e40518502887fb8663e',1,'isGreaterThan(int first, int second):&#160;sort.cpp'],['../sort_8h.html#ab92e58b3497485c94a6b765df9db9f02',1,'isGreaterThan(QString first, QString second):&#160;sort.cpp'],['../sort_8h.html#ac508e53d80ea3e40518502887fb8663e',1,'isGreaterThan(int first, int second):&#160;sort.cpp']]]
 ];

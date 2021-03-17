@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['_7econtactsheet_119',['~ContactSheet',['../class_contact_sheet.html#ab991b5ee32eacd2cee1e86f20f59f981',1,'ContactSheet']]],
-  ['_7emainwindow_120',['~MainWindow',['../class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]]
+  ['populatesortcells_132',['populateSortCells',['../class_main_window.html#a2194027ee49d71c263b70ffa961f16c8',1,'MainWindow']]],
+  ['processline_133',['processLine',['../init_8cpp.html#af7f3614e268583403c9939ca8521b98a',1,'processLine(Football tempTeam, QString line):&#160;init.cpp'],['../init_8h.html#af7f3614e268583403c9939ca8521b98a',1,'processLine(Football tempTeam, QString line):&#160;init.cpp']]]
 ];
