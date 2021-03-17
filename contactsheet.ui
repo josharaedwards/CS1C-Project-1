@@ -101,7 +101,7 @@ QPushButton:hover {
      <x>11</x>
      <y>11</y>
      <width>781</width>
-     <height>19</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -117,7 +117,7 @@ QPushButton:hover {
      <x>11</x>
      <y>40</y>
      <width>781</width>
-     <height>35</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -129,16 +129,17 @@ QPushButton:hover {
    <property name="styleSheet">
     <string notr="true">background-color: rgb(216, 222, 233);
 border: none;
+color: rgb(46, 52, 64);
 font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>11</x>
-     <y>85</y>
+     <x>10</x>
+     <y>80</y>
      <width>781</width>
-     <height>19</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -154,7 +155,7 @@ font: 12pt &quot;Segoe UI&quot;;</string>
      <x>11</x>
      <y>114</y>
      <width>781</width>
-     <height>35</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="minimumSize">
@@ -166,16 +167,17 @@ font: 12pt &quot;Segoe UI&quot;;</string>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(216, 222, 233);
 border: none;
+color: rgb(46, 52, 64);
 font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>11</x>
-     <y>159</y>
+     <x>10</x>
+     <y>160</y>
      <width>781</width>
-     <height>19</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -192,14 +194,15 @@ font: 12pt &quot;Segoe UI&quot;;</string>
    <property name="geometry">
     <rect>
      <x>11</x>
-     <y>188</y>
+     <y>198</y>
      <width>779</width>
-     <height>201</height>
+     <height>191</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(216, 222, 233);
 border: none;
+color: rgb(46, 52, 64);
 font: 12pt &quot;Segoe UI&quot;;</string>
    </property>
   </widget>
