@@ -227,6 +227,9 @@ int totalCapacity(QVector<Football> footballTeams)
             stadiums.push_back(footballTeams[i].getStadiumName());
 
             QString seatingCapacity = footballTeams[i].getSeatingCapacity();
+
+            seatingCapacity.remove(',');
+
             num = seatingCapacity.toInt();
             sum += num;
         }
