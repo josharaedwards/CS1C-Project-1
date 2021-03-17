@@ -8,6 +8,7 @@
 #include "ui_dialog.h"
 #include "init.h"
 
+#include <QDebug>
 #include <QMessageBox>
 
 //Global Football Teams Data Holders
@@ -21,9 +22,23 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    this->displayHome();
+    footballTeams = fileRead("C:/Users/Channel 3/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
 
-    loadDataFromFile("C:/Users/Channel 3/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
+    int numOfEntries = footballTeams.size();
+
+    this->ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    this->ui->tableWidget->setRowCount(numOfEntries);
+
+    populateSortCells(footballTeams);
+
+    for(int i = 0; i < numOfEntries; ++i)
+    {
+        sortedTeams.push_back(footballTeams[i]);
+    }
+
+    totalUpdate(sortedTeams);
+
+    this->displayHome();
 }
 
 MainWindow::~MainWindow()
@@ -50,17 +65,6 @@ void MainWindow::displayHome()
 
 void MainWindow::displaySort()
 {
-    int numOfEntries = footballTeams.size();
-    this->ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    this->ui->tableWidget->setRowCount(numOfEntries);
-
-    populateSortCells(footballTeams);
-
-    for(int i = 0; i < numOfEntries; ++i)
-    {
-        sortedTeams.push_back(footballTeams[i]);
-    }
-
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
     this->ui->sortContent->raise();
