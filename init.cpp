@@ -18,12 +18,29 @@ QVector<Football> fileRead(QString fileName)
 
         line = in.readLine();
 
-        tempTeam = processLine(tempTeam, line);
+        if(!isLineEmpty(line))
+        {
+            tempTeam = processLine(tempTeam, line);
 
-        footballTeams.push_back(tempTeam);
+            footballTeams.push_back(tempTeam);
+        }
     }
 
     return footballTeams;
+}
+
+bool isLineEmpty(QString line)
+{
+    bool isEmpty = false;
+
+    QStringList list = line.split('\t');
+
+    if(list[0] == "" || list[0] == "Expansion")
+    {
+        isEmpty = true;
+    }
+
+    return isEmpty;
 }
 
 Football processLine(Football tempTeam, QString line)
