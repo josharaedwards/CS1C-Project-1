@@ -69,24 +69,22 @@ $(function() {
 <div class="contents">
 <a href="init_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INIT_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INIT_H</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="football_8h.html">football.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sort_8h.html">sort.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;QVector&lt;Football&gt; <a class="code" href="init_8h.html#ae67363b9a23c86188905cd6bcdf74764">fileRead</a>(QString fileName);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<a class="code" href="class_football.html">Football</a> <a class="code" href="init_8h.html#af7f3614e268583403c9939ca8521b98a">processLine</a>(<a class="code" href="class_football.html">Football</a> tempTeam, QString line);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<a class="code" href="class_football.html">Football</a> <a class="code" href="init_8h.html#a48e69591d0ec65e85ab9a184b3026692">updateFootballInfo</a>(<a class="code" href="class_football.html">Football</a>&amp; tempTeam, QStringList list, <span class="keywordtype">int</span> num);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// INIT_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="football_8h.html">football.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sort_8h.html">sort.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;QVector&lt;Football&gt; <a class="code" href="init_8h.html#ae67363b9a23c86188905cd6bcdf74764">fileRead</a>(QString fileName);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<a class="code" href="class_football.html">Football</a> <a class="code" href="init_8h.html#af7f3614e268583403c9939ca8521b98a">processLine</a>(<a class="code" href="class_football.html">Football</a> tempTeam, QString line);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="class_football.html">Football</a> <a class="code" href="init_8h.html#a48e69591d0ec65e85ab9a184b3026692">updateFootballInfo</a>(<a class="code" href="class_football.html">Football</a>&amp; tempTeam, QStringList list, <span class="keywordtype">int</span> num);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// INIT_H</span></div>
 <div class="ttc" id="aclass_football_html"><div class="ttname"><a href="class_football.html">Football</a></div><div class="ttdef"><b>Definition:</b> football.h:21</div></div>
 <div class="ttc" id="afootball_8h_html"><div class="ttname"><a href="football_8h.html">football.h</a></div><div class="ttdoc">holds and handle the data</div></div>
-<div class="ttc" id="ainit_8h_html_a48e69591d0ec65e85ab9a184b3026692"><div class="ttname"><a href="init_8h.html#a48e69591d0ec65e85ab9a184b3026692">updateFootballInfo</a></div><div class="ttdeci">Football updateFootballInfo(Football &amp;tempTeam, QStringList list, int num)</div><div class="ttdef"><b>Definition:</b> init.cpp:44</div></div>
-<div class="ttc" id="ainit_8h_html_ae67363b9a23c86188905cd6bcdf74764"><div class="ttname"><a href="init_8h.html#ae67363b9a23c86188905cd6bcdf74764">fileRead</a></div><div class="ttdeci">QVector&lt; Football &gt; fileRead(QString fileName)</div><div class="ttdef"><b>Definition:</b> init.cpp:3</div></div>
-<div class="ttc" id="ainit_8h_html_af7f3614e268583403c9939ca8521b98a"><div class="ttname"><a href="init_8h.html#af7f3614e268583403c9939ca8521b98a">processLine</a></div><div class="ttdeci">Football processLine(Football tempTeam, QString line)</div><div class="ttdef"><b>Definition:</b> init.cpp:29</div></div>
-<div class="ttc" id="asort_8h_html"><div class="ttname"><a href="sort_8h.html">sort.h</a></div><div class="ttdoc">Functions to organize the data read from file.</div></div>
+<div class="ttc" id="ainit_8h_html_a48e69591d0ec65e85ab9a184b3026692"><div class="ttname"><a href="init_8h.html#a48e69591d0ec65e85ab9a184b3026692">updateFootballInfo</a></div><div class="ttdeci">Football updateFootballInfo(Football &amp;tempTeam, QStringList list, int num)</div><div class="ttdoc">updates Football information acoording to the sort request</div><div class="ttdef"><b>Definition:</b> init.cpp:44</div></div>
+<div class="ttc" id="ainit_8h_html_ae67363b9a23c86188905cd6bcdf74764"><div class="ttname"><a href="init_8h.html#ae67363b9a23c86188905cd6bcdf74764">fileRead</a></div><div class="ttdeci">QVector&lt; Football &gt; fileRead(QString fileName)</div><div class="ttdoc">read from file</div><div class="ttdef"><b>Definition:</b> init.cpp:3</div></div>
+<div class="ttc" id="ainit_8h_html_af7f3614e268583403c9939ca8521b98a"><div class="ttname"><a href="init_8h.html#af7f3614e268583403c9939ca8521b98a">processLine</a></div><div class="ttdeci">Football processLine(Football tempTeam, QString line)</div><div class="ttdoc">updates Football information</div><div class="ttdef"><b>Definition:</b> init.cpp:29</div></div>
+<div class="ttc" id="asort_8h_html"><div class="ttname"><a href="sort_8h.html">sort.h</a></div><div class="ttdoc">Functions to organize and sort the data read from file.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
