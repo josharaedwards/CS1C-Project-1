@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adminpanel.cpp \
     contactsheet.cpp \
     dialog.cpp \
     football.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
     sort.cpp
 
 HEADERS += \
+    adminpanel.h \
     contactsheet.h \
     dialog.h \
     football.h \
@@ -26,6 +28,7 @@ HEADERS += \
     sort.h
 
 FORMS += \
+    adminpanel.ui \
     contactsheet.ui \
     dialog.ui \
     mainwindow.ui

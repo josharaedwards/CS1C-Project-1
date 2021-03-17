@@ -17,6 +17,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void loadDataFromFile(QString fileName);
     void populateSortCells(QVector<Football> teamList);
     SortType stringToEnum(QString text);
     void totalUpdate(QVector<Football> footballTeam);
@@ -27,9 +28,6 @@ public slots:
     void displaySort();
     void displayHelp();
     void displayContact();
-    void adminPasswordAuth();
-    void adminPasswordClear();
-
     void onFilterClick();
     void onSortClick();
 
