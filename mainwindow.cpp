@@ -198,4 +198,6 @@ void MainWindow::totalUpdate(QVector<Football> footballTeam)
     int totalDisplay = totalCapacity(footballTeam);
 
     //Display this onto the UI here
+    //But just to get rid of the warning here's some code
+    std::cout << totalDisplay;
 }
