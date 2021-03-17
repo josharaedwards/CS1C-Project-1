@@ -22,6 +22,7 @@ void ContactSheet::sendBtnHandler()
     Dialog *prompt = new Dialog(nullptr, "Message sent successfully!");
 
     prompt->setWindowTitle("Success");
+    prompt->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     prompt->setAttribute(Qt::WA_DeleteOnClose);
     prompt->show();
 

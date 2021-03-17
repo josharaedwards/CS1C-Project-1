@@ -29,6 +29,9 @@
      <height>720</height>
     </size>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QFrame" name="sidebar">
     <property name="geometry">
      <rect>
@@ -51,7 +54,9 @@
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(46, 52, 64);</string>
+     <string notr="true">background-color: rgb(46, 52, 64);
+font: 87 12pt &quot;Segoe UI Black&quot;;
+</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::NoFrame</enum>
@@ -83,14 +88,12 @@
      <property name="styleSheet">
       <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(236, 239, 244);
 	color: rgb(46, 52, 64);
 }</string>
@@ -123,20 +126,56 @@ QPushButton:hover {
      <property name="styleSheet">
       <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(236, 239, 244);
 	color: rgb(46, 52, 64);
 }</string>
      </property>
      <property name="text">
-      <string>Sort</string>
+      <string>Info</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="closeBtn">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>640</y>
+       <width>81</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>81</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>111</width>
+       <height>81</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border:none;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
+}</string>
+     </property>
+     <property name="text">
+      <string>Exit</string>
      </property>
     </widget>
    </widget>
@@ -162,37 +201,41 @@ QPushButton:hover {
      </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(236, 239, 244);</string>
+     <string notr="true">background-color: rgb(236, 239, 244);
+font: 87 12pt &quot;Segoe UI Black&quot;;</string>
     </property>
     <widget class="QWidget" name="homeContent" native="true">
      <property name="geometry">
       <rect>
-       <x>0</x>
-       <y>-1</y>
-       <width>1181</width>
-       <height>701</height>
+       <x>-10</x>
+       <y>-11</y>
+       <width>1201</width>
+       <height>721</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">.QWidget {
+	background-image: url(:/images/images/background.jpg);
+}</string>
      </property>
      <widget class="QPushButton" name="infoBtn">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>30</x>
         <y>650</y>
-        <width>571</width>
+        <width>551</width>
         <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
+	border: none;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
+	border: none;
 	background-color: rgb(216, 222, 233);
 	color: rgb(46, 52, 64);
 }</string>
@@ -213,14 +256,12 @@ QPushButton:hover {
       <property name="styleSheet">
        <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(216, 222, 233);
 	color: rgb(46, 52, 64);
 }</string>
@@ -233,11 +274,14 @@ QPushButton:hover {
     <widget class="QWidget" name="sortContent" native="true">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>-10</x>
        <y>0</y>
-       <width>1181</width>
-       <height>701</height>
+       <width>1201</width>
+       <height>711</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(236, 239, 244);</string>
      </property>
      <widget class="QComboBox" name="dataSortDropdown">
       <property name="geometry">
@@ -251,7 +295,7 @@ QPushButton:hover {
       <property name="styleSheet">
        <string notr="true">QComboBox {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
+	font: 12pt &quot;Segoe UI&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }</string>
@@ -289,14 +333,12 @@ QPushButton:hover {
       <property name="styleSheet">
        <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(216, 222, 233);
 	color: rgb(46, 52, 64);
 }</string>
@@ -317,7 +359,7 @@ QPushButton:hover {
       <property name="styleSheet">
        <string notr="true">QComboBox {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
+	font: 12pt &quot;Segoe UI&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }</string>
@@ -350,14 +392,12 @@ QPushButton:hover {
       <property name="styleSheet">
        <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(216, 222, 233);
 	color: rgb(46, 52, 64);
 }</string>
@@ -374,6 +414,9 @@ QPushButton:hover {
         <width>1161</width>
         <height>601</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
       </property>
       <row>
        <property name="text">
@@ -676,34 +719,6 @@ QPushButton:hover {
        </property>
       </item>
      </widget>
-     <widget class="QPushButton" name="dataResetBtn">
-      <property name="geometry">
-       <rect>
-        <x>990</x>
-        <y>10</y>
-        <width>181</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
-}
-
-QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
-}</string>
-      </property>
-      <property name="text">
-       <string>Reset</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="dataLoadBtn">
       <property name="geometry">
        <rect>
@@ -716,14 +731,12 @@ QPushButton:hover {
       <property name="styleSheet">
        <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(46, 52, 64);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(216, 222, 233);
 	color: rgb(46, 52, 64);
 }</string>
@@ -743,7 +756,6 @@ QPushButton:hover {
       </property>
       <property name="styleSheet">
        <string notr="true">border:none;
-font: 75 12pt &quot;Consolas&quot;;
 background-color: rgb(46, 52, 64);
 color: rgb(236, 239, 244);</string>
       </property>
@@ -761,8 +773,7 @@ color: rgb(236, 239, 244);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 75 12pt &quot;Consolas&quot;;
-color: rgb(46, 52, 64);</string>
+       <string notr="true">color: rgb(46, 52, 64);</string>
       </property>
       <property name="text">
        <string/>
@@ -771,16 +782,9 @@ color: rgb(46, 52, 64);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <zorder>dataSortDropdown</zorder>
-     <zorder>dataSortBtn</zorder>
-     <zorder>dataFilterDropdown</zorder>
-     <zorder>dataFilterBtn</zorder>
-     <zorder>dataResetBtn</zorder>
-     <zorder>tableWidget</zorder>
-     <zorder>dataLoadBtn</zorder>
-     <zorder>totalCapacityLabel</zorder>
-     <zorder>totalCapacityDisplay</zorder>
     </widget>
+    <zorder>sortContent</zorder>
+    <zorder>homeContent</zorder>
    </widget>
   </widget>
  </widget>
@@ -895,6 +899,22 @@ color: rgb(46, 52, 64);</string>
     <hint type="destinationlabel">
      <x>949</x>
      <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>closeBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>685</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-2</x>
+     <y>532</y>
     </hint>
    </hints>
   </connection>

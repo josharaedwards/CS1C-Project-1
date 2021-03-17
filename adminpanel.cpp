@@ -24,11 +24,6 @@ QString AdminPanel::getFileName()
     return this->ui->fileNameInput->text();
 }
 
-void newFileLoaded(QString newFileName)
-{
-
-}
-
 void AdminPanel::adminPasswordAuth()
 {
     if (this->ui->adminPwdInput->text() == "password")
@@ -42,6 +37,7 @@ void AdminPanel::adminPasswordAuth()
         Dialog *prompt = new Dialog(nullptr, "The password was incorrect. Please try again!");
 
         prompt->setWindowTitle("Login Error");
+        prompt->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
         prompt->setAttribute(Qt::WA_DeleteOnClose);
         prompt->show();
     }
@@ -61,10 +57,5 @@ void AdminPanel::loadFileName()
 
     emit newFileLoaded(fileName);
 
-    closeAdminPanel();
-}
-
-void AdminPanel::closeAdminPanel()
-{
     this->~AdminPanel();
 }

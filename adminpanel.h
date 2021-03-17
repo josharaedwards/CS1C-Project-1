@@ -29,7 +29,6 @@ private slots:
     void adminPasswordAuth();
     void adminPasswordClear();
     void loadFileName();
-    void closeAdminPanel();
 
 private:
     Ui::AdminPanel *ui;

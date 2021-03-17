@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/background.jpg</file>
+    </qresource>
+    <qresource prefix="/data">
+        <file>data/NFL Information Expanded.tsv</file>
+        <file>data/NFL Information With Spaces.tsv</file>
+        <file>data/NFL Information.tsv</file>
+    </qresource>
+</RCC>
