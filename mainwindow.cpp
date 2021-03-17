@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    footballTeams = fileRead("C:/Users/Channel 3/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
+    footballTeams = fileRead(":/data/data/NFL Information.tsv");
 
     int numOfEntries = footballTeams.size();
 
