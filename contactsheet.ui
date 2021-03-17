@@ -26,117 +26,182 @@
    <string>Contact</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 239, 244);
-font: 75 12pt &quot;Consolas&quot;;</string>
+   <string notr="true">background-color: rgb(46, 52, 64);
+color: rgb(236, 239, 244);
+font: 87 12pt &quot;Segoe UI Black&quot;;
+</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QPushButton" name="cancelButton">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>781</width>
-     <height>431</height>
+     <x>510</x>
+     <y>400</y>
+     <width>281</width>
+     <height>41</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="spacing">
-     <number>10</number>
-    </property>
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>&amp;Full Name</string>
-      </property>
-      <property name="buddy">
-       <cstring>lineEdit</cstring>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(216, 222, 233);</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>&amp;E-mail</string>
-      </property>
-      <property name="buddy">
-       <cstring>lineEdit_2</cstring>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_2">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>35</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(216, 222, 233);</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>&amp;Message</string>
-      </property>
-      <property name="buddy">
-       <cstring>plainTextEdit</cstring>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(216, 222, 233);</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>41</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>41</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
 	background-color: rgb(46, 52, 64);
+	border: 3px solid rgb(236, 239, 244);
 	color: rgb(236, 239, 244);
 }
 
 QPushButton:hover {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
 	background-color: rgb(236, 239, 244);
 	color: rgb(46, 52, 64);
 }</string>
-      </property>
-      <property name="text">
-       <string>Send</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>400</y>
+     <width>491</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>41</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	border:none;
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
+}
+
+QPushButton:hover {
+	background-color: rgb(46, 52, 64);
+	border: 3px solid rgb(236, 239, 244);
+	color: rgb(236, 239, 244);
+}</string>
+   </property>
+   <property name="text">
+    <string>Send</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>11</y>
+     <width>781</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Full Name</string>
+   </property>
+   <property name="buddy">
+    <cstring>lineEdit</cstring>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>40</y>
+     <width>781</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(216, 222, 233);
+border: none;
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>85</y>
+     <width>781</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;E-mail</string>
+   </property>
+   <property name="buddy">
+    <cstring>lineEdit_2</cstring>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>114</y>
+     <width>781</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(216, 222, 233);
+border: none;
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>159</y>
+     <width>781</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>&amp;Message</string>
+   </property>
+   <property name="buddy">
+    <cstring>plainTextEdit</cstring>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>188</y>
+     <width>779</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(216, 222, 233);
+border: none;
+font: 12pt &quot;Segoe UI&quot;;</string>
+   </property>
   </widget>
  </widget>
  <resources/>
@@ -170,6 +235,22 @@ QPushButton:hover {
     <hint type="destinationlabel">
      <x>441</x>
      <y>498</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ContactSheet</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>708</x>
+     <y>416</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>718</x>
+     <y>447</y>
     </hint>
    </hints>
   </connection>

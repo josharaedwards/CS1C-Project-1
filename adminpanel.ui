@@ -26,7 +26,10 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 239, 244);</string>
+   <string notr="true">background-color: rgb(46, 52, 64);
+color: rgb(236, 239, 244);
+font: 87 12pt &quot;Segoe UI Black&quot;;
+</string>
   </property>
   <widget class="QWidget" name="loginPanel" native="true">
    <property name="geometry">
@@ -40,17 +43,20 @@
    <widget class="QLineEdit" name="adminPwdInput">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>50</y>
-      <width>211</width>
-      <height>31</height>
+      <x>70</x>
+      <y>40</y>
+      <width>201</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the administrator's password to modify the data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+     <string notr="true">background-color: rgb(216, 222, 233);
+border: none;
+color: rgb(46, 52, 64);
+font: 12pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
@@ -68,25 +74,23 @@
    <widget class="QPushButton" name="loginBtn">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>70</x>
       <y>90</y>
-      <width>211</width>
-      <height>31</height>
+      <width>271</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
 }
 
 QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
+	background-color: rgb(46, 52, 64);
+	border: 3px solid rgb(236, 239, 244);
+	color: rgb(236, 239, 244);
 }</string>
     </property>
     <property name="text">
@@ -96,52 +100,53 @@ QPushButton:hover {
    <widget class="QPushButton" name="clearBtn">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>130</y>
-      <width>211</width>
-      <height>31</height>
+      <x>270</x>
+      <y>40</y>
+      <width>71</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
 }
 
 QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
+	background-color: rgb(46, 52, 64);
+	border: 3px solid rgb(236, 239, 244);
+	color: rgb(236, 239, 244);
 }</string>
     </property>
     <property name="text">
      <string>Clear</string>
     </property>
    </widget>
-   <widget class="QLabel" name="adminTooltip">
+   <widget class="QPushButton" name="cancelBtnA">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>170</y>
-      <width>171</width>
-      <height>20</height>
+      <x>70</x>
+      <y>140</y>
+      <width>271</width>
+      <height>41</height>
      </rect>
     </property>
-    <property name="toolTip">
-     <string>Administrator permission is required to upload and modify the data.</string>
-    </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(46, 52, 64);
-font: 75 10pt &quot;Consolas&quot;;</string>
+     <string notr="true">QPushButton {
+	background-color: rgb(46, 52, 64);
+	border: 3px solid rgb(236, 239, 244);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
+}</string>
     </property>
     <property name="text">
-     <string>What's this?</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Cancel</string>
     </property>
    </widget>
   </widget>
@@ -154,48 +159,52 @@ font: 75 10pt &quot;Consolas&quot;;</string>
      <height>221</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QPushButton" name="loadBtn">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>110</y>
-      <width>211</width>
-      <height>31</height>
+      <x>270</x>
+      <y>80</y>
+      <width>111</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
 }
 
 QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
+	background-color: rgb(46, 52, 64);
+	border: 3px solid rgb(236, 239, 244);
+	color: rgb(236, 239, 244);
 }</string>
     </property>
     <property name="text">
-     <string>Load new data</string>
+     <string>Load</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="fileNameInput">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>70</y>
-      <width>211</width>
-      <height>31</height>
+      <x>30</x>
+      <y>80</y>
+      <width>241</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the administrator's password to modify the data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
+     <string notr="true">background-color: rgb(216, 222, 233);
+border: none;
+color: rgb(46, 52, 64);
+font: 12pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
@@ -211,6 +220,32 @@ QPushButton:hover {
     </property>
     <property name="clearButtonEnabled">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancelBtnB">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>130</y>
+      <width>271</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-color: rgb(46, 52, 64);
+	border: 3px solid rgb(236, 239, 244);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	background-color: rgb(236, 239, 244);
+	color: rgb(46, 52, 64);
+}</string>
+    </property>
+    <property name="text">
+     <string>Cancel</string>
     </property>
    </widget>
   </widget>
@@ -240,8 +275,8 @@ QPushButton:hover {
    <slot>adminPasswordClear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>277</x>
-     <y>160</y>
+     <x>350</x>
+     <y>80</y>
     </hint>
     <hint type="destinationlabel">
      <x>298</x>
@@ -256,12 +291,44 @@ QPushButton:hover {
    <slot>loadFileName()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>194</x>
-     <y>130</y>
+     <x>364</x>
+     <y>100</y>
     </hint>
     <hint type="destinationlabel">
      <x>190</x>
      <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelBtnA</sender>
+   <signal>clicked()</signal>
+   <receiver>AdminPanel</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>101</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>69</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelBtnB</sender>
+   <signal>clicked()</signal>
+   <receiver>AdminPanel</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>190</x>
+     <y>164</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>188</x>
+     <y>312</y>
     </hint>
    </hints>
   </connection>

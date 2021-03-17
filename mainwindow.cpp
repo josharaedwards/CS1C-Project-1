@@ -1,14 +1,14 @@
 #include "mainwindow.h"
 #include "contactsheet.h"
 #include "adminpanel.h"
+#include "helppanel.h"
 #include "dialog.h"
 #include "ui_mainwindow.h"
 #include "ui_contactsheet.h"
 #include "ui_adminpanel.h"
+#include "ui_helppanel.h"
 #include "ui_dialog.h"
 #include "init.h"
-
-#include <QMessageBox>
 
 //Global Football Teams Data Holders
 QVector<Football> footballTeams;
@@ -49,8 +49,9 @@ void MainWindow::displayAdmin()
 {
     AdminPanel *adminPanel = new AdminPanel;
 
-    adminPanel->setAttribute(Qt::WA_DeleteOnClose);
     adminPanel->setWindowTitle("Upload");
+    adminPanel->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    adminPanel->setAttribute(Qt::WA_DeleteOnClose);
     adminPanel->show();
 
     QObject::connect(adminPanel, &AdminPanel::newFileLoaded, this, &MainWindow::loadDataFromFile);
@@ -58,38 +59,33 @@ void MainWindow::displayAdmin()
 
 void MainWindow::displayHome()
 {
-    this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
-    this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
+    this->ui->homeBtn->setStyleSheet("border:none; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
+    this->ui->sortBtn->setStyleSheet("border:none; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeContent->raise();
 }
 
 void MainWindow::displaySort()
 {
-    this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
-    this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
+    this->ui->homeBtn->setStyleSheet("border:none; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
+    this->ui->sortBtn->setStyleSheet("border:none; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
     this->ui->sortContent->raise();
 }
 
 void MainWindow::displayHelp()
 {
-    QMessageBox msgBox;
+    HelpPanel *help = new HelpPanel;
 
-    msgBox.setStyleSheet("QMessageBox { font: 75 10pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64); }");
-    msgBox.setWindowTitle("Navigating this pamplet");
-    msgBox.setText(
-        "Using this pamplet is simple with just a few clicks!"
-        "\n\n• The tabs on the side allow you to find the content that you need with ease."
-        "\n\n• Using our sorting feature, you can see the football teams sorted by alphabetical order, NFL or AFL, stadiums capacity and more."
-        "\n\n• If you have any trouble using the pamphlet or simply want to contact us to request a new feature, please fill up the contact sheet! We would love to hear from you."
-    );
-
-    msgBox.exec();
+    help->setWindowTitle("Navigating this pamphlet");
+    help->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    help->setAttribute(Qt::WA_DeleteOnClose);
+    help->show();
 }
 
 void MainWindow::displayContact()
 {
     ContactSheet *contact = new ContactSheet;
 
+    contact->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     contact->setAttribute(Qt::WA_DeleteOnClose);
     contact->show();
 }
@@ -199,5 +195,5 @@ void MainWindow::totalUpdate(QVector<Football> footballTeam)
 {
     int totalDisplay = totalCapacity(footballTeam);
 
-    this->ui->totalCapacityDisplay->setText(QString::number(totalDisplay));
+    this->ui->totalCapacityDisplay->setText(QString::number(totalDisplay).append(totalDisplay > 1 ? " seats" : " seat"));
 }
