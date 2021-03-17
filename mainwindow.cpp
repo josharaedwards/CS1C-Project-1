@@ -8,7 +8,6 @@
 #include "ui_dialog.h"
 #include "init.h"
 
-#include <QDebug>
 #include <QMessageBox>
 
 //Global Football Teams Data Holders
@@ -51,6 +50,7 @@ void MainWindow::displayAdmin()
     AdminPanel *adminPanel = new AdminPanel;
 
     adminPanel->setAttribute(Qt::WA_DeleteOnClose);
+    adminPanel->setWindowTitle("Upload");
     adminPanel->show();
 
     QObject::connect(adminPanel, &AdminPanel::newFileLoaded, this, &MainWindow::loadDataFromFile);
