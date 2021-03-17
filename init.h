@@ -12,6 +12,8 @@
 ///@return An array named footballTeam with the data from the file
 QVector<Football> fileRead(QString fileName);
 
+bool isLineEmpty(QString line);
+
 Football processLine(Football tempTeam, QString line);
 
 Football updateFootballInfo(Football& tempTeam, QStringList list, int num);
