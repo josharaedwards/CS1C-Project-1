@@ -1,8 +1,10 @@
 #include "mainwindow.h"
 #include "contactsheet.h"
+#include "adminpanel.h"
 #include "dialog.h"
 #include "ui_mainwindow.h"
 #include "ui_contactsheet.h"
+#include "ui_adminpanel.h"
 #include "ui_dialog.h"
 #include "init.h"
 
@@ -20,9 +22,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     this->displayHome();
-    ui->loginPanel->raise();
 
-    footballTeams =  fileRead("C:/Users/Channel 3/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
+    loadDataFromFile("C:/Users/Channel 3/Documents/GitHub/CS1C-Project-1/NFL Information.tsv");
 }
 
 MainWindow::~MainWindow()
@@ -32,15 +33,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::displayAdmin()
 {
-    this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
-    this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
-    this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
-    this->ui->adminContent->raise();
+    AdminPanel *adminPanel = new AdminPanel;
+
+    adminPanel->setAttribute(Qt::WA_DeleteOnClose);
+    adminPanel->show();
+
+    QObject::connect(adminPanel, &AdminPanel::newFileLoaded, this, &MainWindow::loadDataFromFile);
 }
 
 void MainWindow::displayHome()
 {
-    this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
     this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeContent->raise();
@@ -49,6 +51,7 @@ void MainWindow::displayHome()
 void MainWindow::displaySort()
 {
     int numOfEntries = footballTeams.size();
+    this->ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     this->ui->tableWidget->setRowCount(numOfEntries);
 
     populateSortCells(footballTeams);
@@ -58,7 +61,6 @@ void MainWindow::displaySort()
         sortedTeams.push_back(footballTeams[i]);
     }
 
-    this->ui->adminBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->homeBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(46, 52, 64); color: rgb(236, 239, 244);");
     this->ui->sortBtn->setStyleSheet("border:none; font: 75 12pt \"Consolas\"; background-color: rgb(236, 239, 244); color: rgb(46, 52, 64);");
     this->ui->sortContent->raise();
@@ -88,28 +90,15 @@ void MainWindow::displayContact()
     contact->show();
 }
 
-void MainWindow::adminPasswordAuth()
+void MainWindow::loadDataFromFile(QString fileName)
 {
-    if (this->ui->adminPwdInput->text() == "password")
-    {
-        this->ui->loginPanel->hide();
-    }
-    else
-    {
-        this->ui->adminPwdInput->setText("");
+    footballTeams = fileRead(fileName);
 
-        Dialog *prompt = new Dialog(nullptr, "The password was incorrect. Please try again!");
+    this->ui->tableWidget->setRowCount(footballTeams.size());
 
-        prompt->setWindowTitle("Login Error");
-        prompt->setAttribute(Qt::WA_DeleteOnClose);
-        prompt->show();
-    }
-}
+    populateSortCells(footballTeams);
 
-
-void MainWindow::adminPasswordClear()
-{
-    this->ui->adminPwdInput->setText("");
+    totalUpdate(sortedTeams);
 }
 
 void MainWindow::populateSortCells(QVector<Football> teamList)
@@ -197,7 +186,5 @@ void MainWindow::totalUpdate(QVector<Football> footballTeam)
 {
     int totalDisplay = totalCapacity(footballTeam);
 
-    //Display this onto the UI here
-    //But just to get rid of the warning here's some code
-    std::cout << totalDisplay;
+    this->ui->totalCapacityDisplay->setText(QString::number(totalDisplay));
 }

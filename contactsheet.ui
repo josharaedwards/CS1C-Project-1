@@ -90,6 +90,9 @@ font: 75 12pt &quot;Consolas&quot;;</string>
     </item>
     <item>
      <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="text">
        <string>&amp;Message</string>
       </property>

@@ -139,46 +139,6 @@ QPushButton:hover {
       <string>Sort</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="adminBtn">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>160</y>
-       <width>81</width>
-       <height>81</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>81</width>
-       <height>81</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>111</width>
-       <height>81</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
-}
-
-QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(236, 239, 244);
-	color: rgb(46, 52, 64);
-}</string>
-     </property>
-     <property name="text">
-      <string>Admin</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="contentContainer" native="true">
     <property name="geometry">
@@ -282,9 +242,9 @@ QPushButton:hover {
      <widget class="QComboBox" name="dataSortDropdown">
       <property name="geometry">
        <rect>
-        <x>590</x>
+        <x>200</x>
         <y>10</y>
-        <width>201</width>
+        <width>321</width>
         <height>31</height>
        </rect>
       </property>
@@ -320,7 +280,7 @@ QPushButton:hover {
      <widget class="QPushButton" name="dataSortBtn">
       <property name="geometry">
        <rect>
-        <x>800</x>
+        <x>530</x>
         <y>10</y>
         <width>181</width>
         <height>31</height>
@@ -348,8 +308,8 @@ QPushButton:hover {
      <widget class="QComboBox" name="dataFilterDropdown">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>200</x>
+        <y>50</y>
         <width>321</width>
         <height>31</height>
        </rect>
@@ -381,8 +341,8 @@ QPushButton:hover {
      <widget class="QPushButton" name="dataFilterBtn">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>10</y>
+        <x>530</x>
+        <y>50</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -410,9 +370,9 @@ QPushButton:hover {
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>50</y>
+        <y>90</y>
         <width>1161</width>
-        <height>641</height>
+        <height>601</height>
        </rect>
       </property>
       <row>
@@ -744,135 +704,83 @@ QPushButton:hover {
        <string>Reset</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="dataLoadBtn">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>50</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(46, 52, 64);
+	color: rgb(236, 239, 244);
+}
+
+QPushButton:hover {
+	border:none;
+	font: 75 12pt &quot;Consolas&quot;;
+	background-color: rgb(216, 222, 233);
+	color: rgb(46, 52, 64);
+}</string>
+      </property>
+      <property name="text">
+       <string>Load</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="totalCapacityLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+font: 75 12pt &quot;Consolas&quot;;
+background-color: rgb(46, 52, 64);
+color: rgb(236, 239, 244);</string>
+      </property>
+      <property name="text">
+       <string>Total Capacity</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="totalCapacityDisplay">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Consolas&quot;;
+color: rgb(46, 52, 64);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
      <zorder>dataSortDropdown</zorder>
      <zorder>dataSortBtn</zorder>
      <zorder>dataFilterDropdown</zorder>
      <zorder>dataFilterBtn</zorder>
      <zorder>dataResetBtn</zorder>
      <zorder>tableWidget</zorder>
+     <zorder>dataLoadBtn</zorder>
+     <zorder>totalCapacityLabel</zorder>
+     <zorder>totalCapacityDisplay</zorder>
     </widget>
-    <widget class="QWidget" name="adminContent" native="true">
-     <property name="geometry">
-      <rect>
-       <x>-1</x>
-       <y>-1</y>
-       <width>1181</width>
-       <height>701</height>
-      </rect>
-     </property>
-     <widget class="QWidget" name="loginPanel" native="true">
-      <property name="geometry">
-       <rect>
-        <x>-1</x>
-        <y>-1</y>
-        <width>1181</width>
-        <height>721</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <widget class="QLineEdit" name="adminPwdInput">
-       <property name="geometry">
-        <rect>
-         <x>510</x>
-         <y>300</y>
-         <width>181</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the administrator's password to modify the data&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 75 12pt &quot;Consolas&quot;;</string>
-       </property>
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>Password</string>
-       </property>
-       <property name="clearButtonEnabled">
-        <bool>false</bool>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="loginBtn">
-       <property name="geometry">
-        <rect>
-         <x>510</x>
-         <y>340</y>
-         <width>181</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
-}
-
-QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
-}</string>
-       </property>
-       <property name="text">
-        <string>Login</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="clearBtn">
-       <property name="geometry">
-        <rect>
-         <x>510</x>
-         <y>380</y>
-         <width>181</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(46, 52, 64);
-	color: rgb(236, 239, 244);
-}
-
-QPushButton:hover {
-	border:none;
-	font: 75 12pt &quot;Consolas&quot;;
-	background-color: rgb(216, 222, 233);
-	color: rgb(46, 52, 64);
-}</string>
-       </property>
-       <property name="text">
-        <string>Clear</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="adminPanel" native="true">
-      <property name="geometry">
-       <rect>
-        <x>-1</x>
-        <y>0</y>
-        <width>1181</width>
-        <height>701</height>
-       </rect>
-      </property>
-     </widget>
-     <zorder>adminPanel</zorder>
-     <zorder>loginPanel</zorder>
-    </widget>
-    <zorder>homeContent</zorder>
-    <zorder>adminContent</zorder>
-    <zorder>sortContent</zorder>
    </widget>
   </widget>
  </widget>
@@ -911,22 +819,6 @@ QPushButton:hover {
    </hints>
   </connection>
   <connection>
-   <sender>adminBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>displayAdmin()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>38</x>
-     <y>197</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>570</x>
-     <y>8</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>infoBtn</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -959,38 +851,6 @@ QPushButton:hover {
    </hints>
   </connection>
   <connection>
-   <sender>clearBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>adminPasswordClear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>715</x>
-     <y>402</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>735</x>
-     <y>741</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>loginBtn</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>adminPasswordAuth()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>739</x>
-     <y>372</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>774</x>
-     <y>717</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>dataFilterBtn</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -1013,12 +873,28 @@ QPushButton:hover {
    <slot>onSortClick()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>964</x>
-     <y>27</y>
+     <x>504</x>
+     <y>67</y>
     </hint>
     <hint type="destinationlabel">
      <x>985</x>
      <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dataLoadBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>displayAdmin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1131</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>949</x>
+     <y>3</y>
     </hint>
    </hints>
   </connection>
@@ -1029,8 +905,6 @@ QPushButton:hover {
   <slot>displaySort()</slot>
   <slot>displayContact()</slot>
   <slot>displayHelp()</slot>
-  <slot>adminPasswordClear()</slot>
-  <slot>adminPasswordAuth()</slot>
   <slot>onFilterClick()</slot>
   <slot>onSortClick()</slot>
  </slots>
