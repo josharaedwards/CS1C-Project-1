@@ -102,6 +102,15 @@ void MainWindow::loadDataFromFile(QString fileName)
 
     populateSortCells(footballTeams);
 
+    sortedTeams.empty();
+
+    int numOfEntries = footballTeams.size();
+
+    for(int i = 0; i < numOfEntries; ++i)
+    {
+        sortedTeams.push_back(footballTeams[i]);
+    }
+
     totalUpdate(sortedTeams);
 }
 
