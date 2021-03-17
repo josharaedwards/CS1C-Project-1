@@ -242,8 +242,8 @@ QPushButton:hover {
      <widget class="QComboBox" name="dataSortDropdown">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>50</y>
+        <x>200</x>
+        <y>10</y>
         <width>321</width>
         <height>31</height>
        </rect>
@@ -280,8 +280,8 @@ QPushButton:hover {
      <widget class="QPushButton" name="dataSortBtn">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>50</y>
+        <x>530</x>
+        <y>10</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -308,8 +308,8 @@ QPushButton:hover {
      <widget class="QComboBox" name="dataFilterDropdown">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>200</x>
+        <y>50</y>
         <width>321</width>
         <height>31</height>
        </rect>
@@ -341,8 +341,8 @@ QPushButton:hover {
      <widget class="QPushButton" name="dataFilterBtn">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>10</y>
+        <x>530</x>
+        <y>50</y>
         <width>181</width>
         <height>31</height>
        </rect>
@@ -732,6 +732,45 @@ QPushButton:hover {
        <string>Load</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="totalCapacityLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border:none;
+font: 75 12pt &quot;Consolas&quot;;
+background-color: rgb(46, 52, 64);
+color: rgb(236, 239, 244);</string>
+      </property>
+      <property name="text">
+       <string>Total Capacity</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="totalCapacityDisplay">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>181</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;Consolas&quot;;
+color: rgb(46, 52, 64);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
      <zorder>dataSortDropdown</zorder>
      <zorder>dataSortBtn</zorder>
      <zorder>dataFilterDropdown</zorder>
@@ -739,6 +778,8 @@ QPushButton:hover {
      <zorder>dataResetBtn</zorder>
      <zorder>tableWidget</zorder>
      <zorder>dataLoadBtn</zorder>
+     <zorder>totalCapacityLabel</zorder>
+     <zorder>totalCapacityDisplay</zorder>
     </widget>
    </widget>
   </widget>

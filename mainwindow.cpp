@@ -51,6 +51,7 @@ void MainWindow::displayHome()
 void MainWindow::displaySort()
 {
     int numOfEntries = footballTeams.size();
+    this->ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     this->ui->tableWidget->setRowCount(numOfEntries);
 
     populateSortCells(footballTeams);
@@ -93,7 +94,11 @@ void MainWindow::loadDataFromFile(QString fileName)
 {
     footballTeams = fileRead(fileName);
 
+    this->ui->tableWidget->setRowCount(footballTeams.size());
+
     populateSortCells(footballTeams);
+
+    totalUpdate(sortedTeams);
 }
 
 void MainWindow::populateSortCells(QVector<Football> teamList)
@@ -181,7 +186,5 @@ void MainWindow::totalUpdate(QVector<Football> footballTeam)
 {
     int totalDisplay = totalCapacity(footballTeam);
 
-    //Display this onto the UI here
-    //But just to get rid of the warning here's some code
-    std::cout << totalDisplay;
+    this->ui->totalCapacityDisplay->setText(QString::number(totalDisplay));
 }
