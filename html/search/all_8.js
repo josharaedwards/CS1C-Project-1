@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rooftype_35',['rooftype',['../sort_8h.html#ad7fca38b521558f128d4a566729f5803ace1b4b1a1f19ce78a180205d2847abed',1,'sort.h']]]
+  ['newfileloaded_44',['newFileLoaded',['../class_admin_panel.html#aefcada64dea4430d085a838e0bcbc960',1,'AdminPanel::newFileLoaded()'],['../adminpanel_8cpp.html#a448b199935dd78449a929d1295cdf73d',1,'newFileLoaded():&#160;adminpanel.cpp']]]
 ];

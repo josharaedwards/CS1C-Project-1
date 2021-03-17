@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['updatefootballinfo_118',['updateFootballInfo',['../init_8cpp.html#a48e69591d0ec65e85ab9a184b3026692',1,'updateFootballInfo(Football &amp;tempTeam, QStringList list, int num):&#160;init.cpp'],['../init_8h.html#a48e69591d0ec65e85ab9a184b3026692',1,'updateFootballInfo(Football &amp;tempTeam, QStringList list, int num):&#160;init.cpp']]]
+  ['onfilterclick_130',['onFilterClick',['../class_main_window.html#a99e5cb731fe12ed548d73aa2d3431b78',1,'MainWindow']]],
+  ['onsortclick_131',['onSortClick',['../class_main_window.html#a04b723ec1750be5d65c812c2bc41fb9e',1,'MainWindow']]]
 ];

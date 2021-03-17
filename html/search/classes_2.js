@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow_65',['MainWindow',['../class_main_window.html',1,'']]]
+  ['dialog_83',['Dialog',['../class_dialog.html',1,'']]]
 ];

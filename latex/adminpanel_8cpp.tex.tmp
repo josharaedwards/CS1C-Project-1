@@ -1,0 +1,23 @@
+\hypertarget{adminpanel_8cpp}{}\doxysection{adminpanel.\+cpp File Reference}
+\label{adminpanel_8cpp}\index{adminpanel.cpp@{adminpanel.cpp}}
+{\ttfamily \#include \char`\"{}adminpanel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dialog.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui\+\_\+adminpanel.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui\+\_\+dialog.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$QFile\+Dialog$>$}\newline
+Include dependency graph for adminpanel.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{adminpanel_8cpp_a448b199935dd78449a929d1295cdf73d}{new\+File\+Loaded}} (QString new\+File\+Name)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{adminpanel_8cpp_a448b199935dd78449a929d1295cdf73d}\label{adminpanel_8cpp_a448b199935dd78449a929d1295cdf73d}} 
+\index{adminpanel.cpp@{adminpanel.cpp}!newFileLoaded@{newFileLoaded}}
+\index{newFileLoaded@{newFileLoaded}!adminpanel.cpp@{adminpanel.cpp}}
+\doxysubsubsection{\texorpdfstring{newFileLoaded()}{newFileLoaded()}}
+{\footnotesize\ttfamily void new\+File\+Loaded (\begin{DoxyParamCaption}\item[{QString}]{new\+File\+Name }\end{DoxyParamCaption})}
+

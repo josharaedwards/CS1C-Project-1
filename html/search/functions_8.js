@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['totalcapacity_117',['totalCapacity',['../sort_8cpp.html#a75c465491e2c95e78598166ccb3dfd18',1,'totalCapacity(QVector&lt; Football &gt; footballTeams):&#160;sort.cpp'],['../sort_8h.html#a75c465491e2c95e78598166ccb3dfd18',1,'totalCapacity(QVector&lt; Football &gt; footballTeams):&#160;sort.cpp']]]
+  ['newfileloaded_129',['newFileLoaded',['../class_admin_panel.html#aefcada64dea4430d085a838e0bcbc960',1,'AdminPanel::newFileLoaded()'],['../adminpanel_8cpp.html#a448b199935dd78449a929d1295cdf73d',1,'newFileLoaded():&#160;adminpanel.cpp']]]
 ];

@@ -1,3 +1,8 @@
+/**
+ *  @file adminpanel.h
+ *  @brief GUI controls for admin tab
+ */
+
 #ifndef ADMINPANEL_H
 #define ADMINPANEL_H
 

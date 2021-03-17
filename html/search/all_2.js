@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['fileread_8',['fileRead',['../init_8cpp.html#a7fb49e53f2b428e84dc83ea7912547ac',1,'fileRead(QString fileName):&#160;init.cpp'],['../init_8h.html#a7fb49e53f2b428e84dc83ea7912547ac',1,'fileRead(QString fileName):&#160;init.cpp']]],
-  ['football_9',['Football',['../class_football.html',1,'Football'],['../class_football.html#a3bdb21858d0160ccdafa922fa036abd9',1,'Football::Football()'],['../class_football.html#ac69928806cc9bad2f4ae801a2ca4295a',1,'Football::Football(QString oTN, QString oSN, QString oSC, QString oL, QString oC, QString oD, QString oST, QString oSRT, QString oDO)']]],
-  ['football_2ecpp_10',['football.cpp',['../football_8cpp.html',1,'']]],
-  ['football_2eh_11',['football.h',['../football_8h.html',1,'']]],
-  ['footballteams_12',['footballTeams',['../mainwindow_8cpp.html#ad73ab88d8b070415dc5b0c38c1c59e6c',1,'mainwindow.cpp']]]
+  ['dialog_6',['Dialog',['../class_dialog.html',1,'Dialog'],['../class_dialog.html#ab30ac48588a82983f653f58d50a52ddc',1,'Dialog::Dialog(QWidget *parent=nullptr)'],['../class_dialog.html#a03d5f0a76ea29912f04b21578830559b',1,'Dialog::Dialog(QWidget *parent=nullptr, QString dialogText=&quot;&quot;)']]],
+  ['dialog_2ecpp_7',['dialog.cpp',['../dialog_8cpp.html',1,'']]],
+  ['dialog_2eh_8',['dialog.h',['../dialog_8h.html',1,'']]],
+  ['displayadmin_9',['displayAdmin',['../class_main_window.html#a9df76e2d80b6d9850af041d5131ce8c7',1,'MainWindow']]],
+  ['displaybyleague_10',['displayByLeague',['../sort_8cpp.html#ac32ea5a4e719abba11c383cf7d9780e9',1,'displayByLeague(QVector&lt; Football &gt; defaultTeamList, bool bIsNFC):&#160;sort.cpp'],['../sort_8h.html#a08ad2ce3a8daad33b2d57d4fc47acbee',1,'displayByLeague(QVector&lt; Football &gt; footballTeams, bool bIsNFL):&#160;sort.cpp']]],
+  ['displaycontact_11',['displayContact',['../class_main_window.html#ad71cfca0f2fde9cd077b56120df9adf6',1,'MainWindow']]],
+  ['displayhelp_12',['displayHelp',['../class_main_window.html#a380e0c85ab3bc82b36740fc88e65ffba',1,'MainWindow']]],
+  ['displayhome_13',['displayHome',['../class_main_window.html#a3a96f21a64fe8b2444576b234bb5466f',1,'MainWindow']]],
+  ['displaysort_14',['displaySort',['../class_main_window.html#a622c9942240e2c538a771d80c4f4b5f5',1,'MainWindow']]]
 ];

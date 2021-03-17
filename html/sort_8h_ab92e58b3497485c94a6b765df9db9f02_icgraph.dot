@@ -1,0 +1,26 @@
+digraph "isGreaterThan"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="isGreaterThan",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sortByLocation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8cpp.html#a89dd291b874271baabcb3cc9fe7e560c",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sort",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8cpp.html#a96d4cb0ef4e3d7c1d13ce7395284b6e6",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="MainWindow::onSortClick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_main_window.html#a04b723ec1750be5d65c812c2bc41fb9e",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sortByRoofType",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8cpp.html#a26258abf7469600e321edf2ceb249c30",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sortBySeating",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8cpp.html#af639294f422997600239a630988315f9",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sortByStadium",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8cpp.html#a824b73824d1d935f60989f9c87b71b1f",tooltip=" "];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="sortByTeam",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sort_8cpp.html#ab92ac1061c192fea93d9be681e07deeb",tooltip=" "];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

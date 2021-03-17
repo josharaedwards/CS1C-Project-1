@@ -1,6 +1,11 @@
 #ifndef DIALOG_H
 #define DIALOG_H
 
+/**
+ *  @file dialog.h
+ */
+
+
 #include <QWidget>
 
 namespace Ui {

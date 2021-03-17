@@ -1,0 +1,20 @@
+digraph "Football::setConference"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Football::setConference",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="updateFootballInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$init_8cpp.html#a48e69591d0ec65e85ab9a184b3026692",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="processLine",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$init_8cpp.html#af7f3614e268583403c9939ca8521b98a",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="fileRead",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$init_8cpp.html#ae67363b9a23c86188905cd6bcdf74764",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MainWindow::loadDataFromFile",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_main_window.html#a46bf31632c039fd823541ea64d10c1a5",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="MainWindow::displayAdmin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_main_window.html#a9df76e2d80b6d9850af041d5131ce8c7",tooltip=" "];
+  Node4 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MainWindow::MainWindow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_main_window.html#a996c5a2b6f77944776856f08ec30858d",tooltip=" "];
+}
