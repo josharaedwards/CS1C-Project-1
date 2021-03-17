@@ -34,6 +34,8 @@ bool isGreaterThan(QString first, QString second);
 
 bool isGreaterThan(int first, int second);
 
+bool find(QVector<QString> stadiums, QString compare);
+
 int totalCapacity(QVector<Football> footballTeams);
 
 #endif // SORT_H

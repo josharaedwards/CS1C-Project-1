@@ -197,17 +197,42 @@ bool isGreaterThan(int first, int second)
     }
 }
 
+bool find(QVector<QString> stadiums, QString compare)
+{
+    bool isFound = false;
+    int size = stadiums.size();
+
+    for(int i = 0; i < size; ++i)
+    {
+        if(compare == stadiums[i])
+        {
+            isFound = true;
+        }
+    }
+
+    return isFound;
+}
+
 int totalCapacity(QVector<Football> footballTeams)
 {
     int numOfEntries = footballTeams.size();
+    QVector<QString> stadiums;
     int num = 0;
     int sum = 0;
 
     for (int i = 0; i < numOfEntries; i++)
     {
-        QString seatingCapacity = footballTeams[i].getSeatingCapacity();
-        num = seatingCapacity.toInt();
-        sum += num;
+        if(!find(stadiums, footballTeams[i].getStadiumName()))
+        {
+            stadiums.push_back(footballTeams[i].getStadiumName());
+
+            QString seatingCapacity = footballTeams[i].getSeatingCapacity();
+
+            seatingCapacity.remove(',');
+
+            num = seatingCapacity.toInt();
+            sum += num;
+        }
     }
 
     return sum;
